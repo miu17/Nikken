@@ -1,0 +1,88 @@
+# C++ objects and libs
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.dll
+*.dylib
+*.lib
+*.qm
+*.stash
+*.opt
+
+
+# Qt-es
+[Rr]elease
+[Dd]ebug
+*_plugin_import.cpp
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+Makefile*
+*build-*
+
+# Qt unit tests
+target_wrapper.*
+
+# QtCreator
+*.autosave
+
+# QtCreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
+
+# QtCreator CMake
+CMakeLists.txt.user*
+
+*[Rr]elease/
+*[Dd]ebug/
+lib/
+include/
+exe/
+
+!.gitignore
+!*ja.qm
+
+# sample
+*.pdf
+
+# Intel Fortran
+!/fortranLib/IntelFortran/**/*.lib
+
+backup/hub/hana_basic/
+backup/hub/dxf/
+backup/hub/geo_v2.3/
+
+*.dll
+
+deploy/
+
+# npstnを解凍したフォルダ
+*_7za/
+
+# 荷重拾い結果フォルダ
+*_outputs/
+*.csv
+*.nsv
+*.lst
+
+!csv_sample/*
+!P3DSampleData/*
+!NewBUILDING3D/3dcal/lib/*
+!include_files/*
+!standard_base/*
+!standard_isolator/*
+!standard_material/*

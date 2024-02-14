@@ -1,0 +1,165 @@
+*COVER
+*ORGANIZE
+!*OUTLINE
+*PLAN
+B1        1         PHR
+*SECTION
+X1        X2        X3
+Y1        Y2        Y3
+*LSGIR
+*LSCOL
+*LSWAL
+*LSBEAM
+*LSSLAB
+*STT
+*MATC
+*MATR
+*CCS
+CVL       RSTDL     1.0       RSTLL1    1.0
+CE1       RSTE1     1.0
+CE2       RSTE2     1.0
+*POLICYLD
+*LDL
+*LDF
+*LPLAN
+B1        1         PHR
+*SEISLE
+*LCMQP
+CVL       B1        1         PHR
+*LCMQS
+CVL       X1        X2        X3
+CVL       Y1        Y2        Y3
+*JMASSP
+B1        1         PHR
+*JMASSS
+X1        X2        X3
+Y1        Y2        Y3
+*POLICYEC
+*CMODEL
+*EMODEL
+*MODELP
+MODEL2    B1        1         PHR
+*MODELS
+MODEL2    X1        X2        X3        Y1        Y2        Y3
+!*MPAHIP
+!MODEL2    B1        1         PHR
+!*MPHAIS
+!MODEL2    X1        X2        X3        Y1        Y2        Y3
+*MRLP
+MODEL2    B1        1         PHR
+*MRLS
+MODEL2    X1        X2        X3        Y1        Y2        Y3
+*MCLP
+MODEL2    B1        1         PHR
+*MCLS
+MODEL2    X1        X2        X3        Y1        Y2        Y3
+*MBLP
+MODEL2    B1        1         PHR
+*MBLS
+MODEL2    X1        X2        X3        Y1        Y2        Y3
+*ANACON
+*RFLOOR
+*JSPRING
+*MSPRING
+!*MDETAIL
+!*AUTOPHI
+*AUTOLK
+*JNT
+*INDEX
+*FRAME
+*PNLMDL
+*OUTCS
+*VJSTRP
+CVL       B1        1         PHR
+*VJSTRS
+CVL       X1        X2        X3
+CVL       Y1        Y2        Y3
+*VFSTRP
+CVL       B1        1         PHR
+*VFSTRS
+CVL       X1        X2        X3
+CVL       Y1        Y2        Y3
+*HRATIO
+*HJSTRP
+CE1       B1        1         PHR
+CE2       B1        1         PHR
+*HJSTRS
+CE1       X1        X2        X3
+CE2       X1        X2        X3
+*HFSTRP
+CE1       B1        1         PHR
+CE2       B1        1         PHR
+*HFSTRS
+CE1       X1        X2        X3
+CE2       X1        X2        X3
+*CREZ
+CVL       CE1       CE2       B1
+*REACT
+CVL       B1
+CE1       B1
+CE2       B1
+*STSTIFF
+*FRSTIFF
+*FRDIST
+*QMAP
+CE1       B1        1
+CE2       B1        1
+*POLICYCH
+*CHCASE
+*CHVP
+CVL       B1        1         PHR
+*CHVS
+CVL       X1        X2        X3
+CVL       Y1        Y2        Y3
+*CHHP
+CE1       B1        1         PHR
+CE2       B1        1         PHR
+*CHHS
+CE1       X1        X2        X3
+CE2       Y1        Y2        Y3
+*CHLISTM
+*CHLISTQ
+*CHCOL
+C                             VL        VL+E1     VL-E1     VL+E2     VL-E2
+                    B1    1
+*CHGIR
+C                             VL        VL+E1     VL-E1
+                    B1    PHR   X1    X3
+C                             VL        VL+E2     VL-E2
+                    B1    PHR   Y1    Y3
+*CHWAL
+C                             VL        VL+E1     VL-E1
+                    B1    1
+*POLICYSTEC
+*MXDFRM
+*PRESTEC
+*GCKCP
+B1        1         PHR
+*STECF
+*CWAREA
+*QUDS
+CASE      XP
+FLOOR     B1        1
+GRID      X1        X2        X3
+CASE      YP
+FLOOR     B1        1
+GRID      Y1        Y2        Y3
+CASE      XM
+FLOOR     B1        1
+GRID      X1        X2        X3
+CASE      YM
+FLOOR     B1        1
+GRID      Y1        Y2        Y3
+*DSSTR
+*MRNK
+*QUN
+*DSSH
+*QUPUSH
+*QUCURVE
+*QUSTR
+*QUSH
+*DSQUCURVE
+*QUNEEDF
+*MESSAGE
+*CONTENTS
+*END

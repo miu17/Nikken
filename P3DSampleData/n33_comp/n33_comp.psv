@@ -1,0 +1,863 @@
+1.0.0-Lib
+**FLOOR
+5 7
+NO	NAME	HEIGHT	FLOORSCALE	BEAM	SLAB	UUID
+	1	0.1				{40c0281a-2406-47a1-9765-8ce97a38e983}
+	2	5.1				{fb8aea58-cdae-4668-b045-e271f8ce834f}
+	3	9.1				{2d69ac4e-9b2e-417b-aa0c-520063de8563}
+	4	13.1				{20eb4468-7a57-4732-a8ca-ac52cccd89a6}
+	5	17.1				{34a634bf-3b18-4940-8610-cd5531839f96}
+**FRAME
+2 14
+NO	FRAMEGROUP	FRAMETYPE	FRAMESUM	OX	OY	STARTANGLE	ENDANGLE	DIVISIONS	LENGTHPLUS	LENGTHMINUS	FLOORFROM	FLOORTO	GID
+	X	直線	2										{5c6be33c-aee4-4777-b504-6924a127ee9d}
+	Y	直線	2			90							{5d2e14a0-674d-4414-8d2a-d462a68a8f24}
+4 10
+NO	FRAMEGROUP	FRAMETYPE	NAME	SPAN	ANGLE	BUTTON	XYPOINTS	GID	UUID
+	X	直線	X1	5				{5c6be33c-aee4-4777-b504-6924a127ee9d}	{8ed335be-3e3f-42e4-9f26-9d6e5130d7ca}
+	X	直線	X2					{5c6be33c-aee4-4777-b504-6924a127ee9d}	{9fce7cf5-81fd-4146-a134-1826c87b3b00}
+	Y	直線	Y1	5				{5d2e14a0-674d-4414-8d2a-d462a68a8f24}	{3e7fde77-f8f3-42f7-8788-1c350eeed33d}
+	Y	直線	Y2					{5d2e14a0-674d-4414-8d2a-d462a68a8f24}	{b38ebc80-b95c-48d4-90ec-85efd93ebd50}
+**MATERIAL
+4 26
+NO	CATEGORY	LABEL	SYMBOL	RANGEFROM	RANGETO	E	G	UNITWEIGHT1	UNITWEIGHT2	MODULARRATIO	F_STRENGTH	T_L	T_S	T_U	C_L	C_S	C_U	S_L	S_S	S_U	A_L	A_S	A_U	UA_L	UA_S
+	コンクリート	FC21				21680	9034	24	25	15	21	0	0	2.566	7	14	17.85	0.7	1.05	1.4			5.264		
+	鉄筋	SD295		10	16	205000						196.7	295	324.5				195	295	295					
+	鉄筋	SD345		19	25	205000						215	345	379.5				195	345	345					
+	鉄骨	SN490				205000	79000	76.98			325	216.7	325	357.5				125.1	187.6	206.4					
+**COLUMN
+2 42
+No	LABEL	FLOORFROM	FLOORTO	FINISHLOAD	CONC	iDY	iDZ	iMAINBAR1	iMAINBAR2	iMAINBARPHI	iAXIALCENTERY	iAXIALCENTERZ	iAXIALDY	iAXIALDZ	iAXIALBAR1	iAXIALBAR2	iAXIALBARPHI	iHOOPY	iHOOPZ	iHOOPPHI	iHOOPPITCH	iRK	iRY		jDZ	jDY	jMAINBAR2	jMAINBARPHI	jAXIALCENTERY	jAXIALCENTERZ	jAXIALDY	jAXIALDZ	jAXIALBAR1	jAXIALBAR2	jAXIALBARPHI	jHOOPY	jHOOPZ	jHOOPPHI	jHOOPPITCH	jRK	jRY
+	RC1			1000	FC21	500																																			
+	RC2			1000	FC21	700	700																																		
+1 29
+NO	LABEL	FLOORFROM	FLOORTO	FINISHLOAD	iLENGTH	BASELIST	iSTEEL	iSHAPELISTNAME	iSTANDARDSHAPESTEEL	iH	iB	iT1	iT2	iH_T	iB_T	iT1_T	iT2_T	jSTEEL	jSHAPELISTNAME	jSTANDARDSHAPESTEEL	jH	jB	jT1	jT2	jH_T	jB_T	jT1_T	jT2_T
+	SC1			200		BS1	SN490	角形鋼管(BCP)	BX-400x400x9	400	400	9																
+1 79
+NO	LABEL	FLOORFROM	FLOORTO	FINISHLOAD	CONC	FILLEDCONC	iLENGTH	BASELIST	iDY	iDZ	iMAINBAR1	iMAINBAR2	iMAINBARPHI	iAXIALCENTERY	iAXIALCENTERZ	iAXIALDY	iAXIALDZ	iAXIALBAR1	iAXIALBAR2	iAXIALBARPHI	iHOOPY	iHOOPZ	iHOOPPHI	iHOOPPITCH	iRK	iRY	iSTEEL	iSHAPELISTNAME	iSTANDARDSHAPESTEEL	iH	iB	iT1	iT2	iCOODINATEY	iCOODINATEZ	iSHAPELISTNAME_T	iSTANDARDSHAPESTEEL_T	iH_T	iB_T	iT1_T	iT2_T	iCOODINATEY_T	iCOODINATEZ_T	jDY	jDZ	jMAINBAR1	jMAINBAR2	jMAINBARPHI	jAXIALCENTERY	jAXIALCENTERZ	jAXIALDY	jAXIALDZ	jAXIALBAR1	jAXIALBAR2	jAXIALBARPHI	jHOOPY	jHOOPZ	jHOOPPHI	jHOOPPITCH	jRK	jRY	jSTEEL	jSHAPELISTNAME	jSTANDARDSHAPESTEEL	jH	jB	jT1	jT2	jCOODINATEY	jCOODINATEZ	jSHAPELISTNAME_T	jSTANDARDSHAPESTEEL_T	jH_T	jB_T	jT1_T	jT2_T	jCOODINATEY_T	jCOODINATEZ_T
+	SRC1			1000	FC21			BSRC1	800	800																	SN490	Ｈ形鋼(JIS)	H-500x200x10x16	500	200	10	16			Ｈ形鋼(JIS)	H-500x200x10x16	500	200	10	16																																					
+1 22
+NO	LABEL	FLOORFROM	FLOORTO	FINISHLOAD	FILLEDCONC	iLENGTH	BASELIST	iSTEEL	iSHAPELISTNAME	iSTANDARDSHAPESTEEL	iH	iB	iT1	iT2	jSTEEL	jSHAPELISTNAME	jSTANDARDSHAPESTEEL	jH	jB	jT1	jT2
+	CFTC1			200	FC21			SN490	角形鋼管(BCP)	BX-500x500x16	500	500	16								
+**GIRDER
+1 46
+NO	LABEL	FLOORFROM	FLOORTO	CANTILEVER	FINISHLOAD	CONC	iDY	iDZ	iMAINBAR1	iMAINBAR2	iMAINBARPHI1	iMAINBARPHI2	iHOOPZ	iHOOPPHI	iHOOPPITCH	iRK	iRKU	iRKB	iRY	mDY	mDZ	mMAINBAR1	mMAINBAR2	mMAINBARPHI1	mMAINBARPHI2	mHOOPZ	mHOOPPHI	mHOOPPITCH	mRK	mRKU	mRKB	mRY	jDY	jDZ	jMAINBAR1	jMAINBAR2	jMAINBARPHI1	jMAINBARPHI2	jHOOPZ	jHOOPPHI	jHOOPPITCH	jRK	jRKU	jRKB	jRY
+	RCG1			一般	1000	FC21	400	600																																					
+1 34
+NO	LABEL	FLOORFROM	FLOORTO	CANTILEVER	FINISHLOAD	iLENGTH	jLENGTH	iENDSTIFFENER	jENDSTIFFENER	iSTEEL	iSTEELWEB	iSHAPELISTNAME	iSTANDARDSHAPESTEEL	iH	iB	iT1	iT2	mSTEEL	mSTEELWEB	mSHAPELISTNAME	mSTANDARDSHAPESTEEL	mH	mB	mT1	mT2	jSTEEL	jSTEELWEB	jSHAPELISTNAME	jSTANDARDSHAPESTEEL	jH	jB	jT1	jT2
+	SG1			一般	200			無し	無し	SN490		Ｈ形鋼(JIS)	H-250x125x6x9	250	125	6	9																
+1 81
+NO	LABEL	FLOORFROM	FLOORTO	CANTILEVER	FINISHLOAD	CONC	iLENGTH	jLENGTH	iDY	iDZ	iMAINBAR1	iMAINBAR2	iMAINBARPHI1	iMAINBARPHI2	iHOOPZ	iHOOPPHI	iHOOPPITCH	iRK	iRKU	iRKB	iRY	iRY1	iSTEEL	iSTEELWEB	iSHAPELISTNAME	iSTANDARDSHAPESTEEL	iH	iB	iT1	iT2	iCOODINATEY	iCOODINATEZ	mDY	mDZ	mMAINBAR1	mMAINBAR2	mMAINBARPHI1	mMAINBARPHI2	mHOOPZ	mHOOPPHI	mHOOPPITCH	mRK	mRKU	mRKB	mRY	mRY1	mSTEEL	mSTEELWEB	mSHAPELISTNAME	mSTANDARDSHAPESTEEL	mH	mB	mT1	mT2	mCOODINATEY	mCOODINATEZ	jDY	jDZ	jMAINBAR1	jMAINBAR2	jMAINBARPHI1	jMAINBARPHI2	jHOOPZ	jHOOPPHI	jHOOPPITCH	jRK	jRKU	jRKB	jRY	jRY1	jSTEEL	jSTEELWEB	jSHAPELISTNAME	jSTANDARDSHAPESTEEL	jH	jB	jT1	jT2	jCOODINATEY	jCOODINATEZ
+	GSRC1			一般	1000	FC21			500	800													SN490		Ｈ形鋼(JIS)	H-500x200x10x16	500	200	10	16																																																		
+**BRACE
+1 33
+NO	LABEL	FINISHLOAD	COMPRESSIVERESISTANCE	iLENGTH	jLENGTH	AREA	EFFECTIVEAREA	SLENDERNESSRATIO	UNITMASS	DISPLAYHEIGHT	DISPLAYWIDTH	iSTEEL	iSHAPELISTNAME	iSTANDARDSHAPESTEEL	iH	iB	iT1	iT2	mSTEEL	mSHAPELISTNAME	mSTANDARDSHAPESTEEL	mH	mB	mT1	mT2	jSTEEL	jSHAPELISTNAME	jSTANDARDSHAPESTEEL	jH	jB	jT1	jT2
+	V1	200	圧縮引張共									SN490	Ｈ形鋼(JIS)	H-400x200x8x13	400	200	8	13														
+**BEAM
+1 44
+NO	LABEL	CANTILEVER	FINISHLOAD	CONC	iDY	iDZ	iMAINBAR1	iMAINBAR2	iMAINBARPHI1	iMAINBARPHI2	iHOOPZ	iHOOPPHI	iHOOPPITCH	iRK	iRKU	iRKB	iRY	mDY	mDZ	mMAINBAR1	mMAINBAR2	mMAINBARPHI1	mMAINBARPHI2	mHOOPZ	mHOOPPHI	mHOOPPITCH	mRK	mRKU	mRKB	mRY	jDY	jDZ	jMAINBAR1	jMAINBAR2	jMAINBARPHI1	jMAINBARPHI2	jHOOPZ	jHOOPPHI	jHOOPPITCH	jRK	jRKU	jRKB	jRY
+	BRC1	一般	1000		300	500																																					
+1 30
+NO	LABEL	CANTILEVER	FINISHLOAD	iLENGTH	jLENGTH	iSTEEL	iSTEELWEB	iSHAPELISTNAME	iSTANDARDSHAPESTEEL	iH	iB	iT1	iT2	mSTEEL	mSTEELWEB	mSHAPELISTNAME	mSTANDARDSHAPESTEEL	mH	mB	mT1	mT2	jSTEEL	jSTEELWEB	jSHAPELISTNAME	jSTANDARDSHAPESTEEL	jH	jB	jT1	jT2
+	SB1	一般	200			SN490		Ｈ形鋼(JIS)	H-100x50x5x7	100	50	5	7																
+1 79
+NO	LABEL	CANTILEVER	FINISHLOAD	CONC	iLENGTH	jLENGTH	iDY	iDZ	iMAINBAR1	iMAINBAR2	iMAINBARPHI1	iMAINBARPHI2	iHOOPZ	iHOOPPHI	iHOOPPITCH	iRK	iRKU	iRKB	iRY	iRY1	iSTEEL	iSTEELWEB	iSHAPELISTNAME	iSTANDARDSHAPESTEEL	iH	iB	iT1	iT2	iCOODINATEY	iCOODINATEZ	mDY	mDZ	mMAINBAR1	mMAINBAR2	mMAINBARPHI1	mMAINBARPHI2	mHOOPZ	mHOOPPHI	mHOOPPITCH	mRK	mRKU	mRKB	mRY	mRY1	mSTEEL	mSTEELWEB	mSHAPELISTNAME	mSTANDARDSHAPESTEEL	mH	mB	mT1	mT2	mCOODINATEY	mCOODINATEZ	jDY	jDZ	jMAINBAR1	jMAINBAR2	jMAINBARPHI1	jMAINBARPHI2	jHOOPZ	jHOOPPHI	jHOOPPITCH	jRK	jRKU	jRKB	jRY	jRY1	jSTEEL	jSTEELWEB	jSHAPELISTNAME	jSTANDARDSHAPESTEEL	jH	jB	jT1	jT2	jCOODINATEY	jCOODINATEZ
+	SRCB1	一般	1000				500	800													SN490		Ｈ形鋼(JIS)	H-500x200x10x16	500	200	10	16																																																		
+**SLAB
+1 35
+NO	LABEL	SLABTYPE	CONC	CONCTHICKNESS	STEEL	STEELTHICKNESS	FINISHLOAD	LISTLOADDIRECTION	STANDARDBARPHI	STANDARDBARPITCH	sUPPEREDGE_A_BARPHI	sUPPEREDGE_A_BARPITCH	sLOWEREDGE_A_BARPHI	sLOWEREDGE_A_BARPITCH	sUPPERCENTER_A_BARPHI	sUPPERCENTER_A_BARPITCH	sLOWERCENTER_A_BARPHI	sLOWERCENTER_A_BARPITCH	sUPPER_B_BARPHI	sUPPER_B_BARPITCH	sLOWER_B_BARPHI	sLOWER_B_BARPITCH	lUPPEREDGE_A_BARPHI	lUPPEREDGE_A_BARPITCH	lLOWEREDGE_A_BARPHI	lLOWEREDGE_A_BARPITCH	lUPPERCENTER_A_BARPHI	lUPPERCENTER_A_BARPITCH	lLOWERCENTER_A_BARPHI	lLOWERCENTER_A_BARPITCH	lUPPER_B_BARPHI	lUPPER_B_BARPITCH	lLOWER_B_BARPHI	lLOWER_B_BARPITCH
+	S1	非構造モデル	FC21	150			1000																											
+**WALL
+1 27
+NO	LABEL	FLOORFROM	FLOORTO	WALLTYPE	CONC	CONCTHICKNESS	STEEL	STEELTHICKNESS	FINISHLOAD	BARARRANGEMENTTYPE	vBARPHI	vBARPITCH	hBARPHI	hBARPITCH	vSMALLOPENINGBARNUM	vSMALLOPENINGBARPHI	hSMALLOPENINGBARNUM	hSMALLOPENINGBARPHI	dSMALLOPENINGBARNUM	dSMALLOPENINGBARPHI	vLARGEOPENINGBARNUM	vLARGEOPENINGBARPHI	hLARGEOPENINGBARNUM	hLARGEOPENINGBARPHI	dLARGEOPENINGBARNUM	dLARGEOPENINGBARPHI
+	WRC1			耐力壁	FC21	180																				
+1 16
+NO	LABEL	FLOORFROM	FLOORTO	WALLTYPE	STEEL	STEELTHICKNESS	FINISHLOAD	vRIBPITCH	vRIBTYPE	vRIBTHICKNESS	vRIBBREADTH	hRIBPITCH	hRIBTYPE	hRIBTHICKNESS	hRIBBREADTH
+	SW1			耐力壁	SN490	12	200								
+**UWALL
+1 29
+NO	LABEL	CONC	CONCTHICKNESS	STEEL	STEELTHICKNESS	FINISHLOAD	STANDARDBARPHI	STANDARDBARPITCH	vOUTERTOP_BARPHI	vOUTERTOP_BARPITCH	vOUTERMIDDLE_BARPHI	vOUTERMIDDLE_BARPITCH	vOUTERBOTTOM_BARPHI	vOUTERBOTTOM_BARPITCH	hOUTEREDGE_BARPHI	hOUTEREDGE_BARPITCH	hOUTERCENTER_BARPHI	hOUTERCENTER_BARPITCH	vINNERTOP_BARPHI	vINNERTOP_BARPITCH	vINNERMIDDLE_BARPHI	vINNERMIDDLE_BARPITCH	vINNERBOTTOM_BARPHI	vINNERBOTTOM_BARPITCH	hINNEREDGE_BARPHI	hINNEREDGE_BARPITCH	hINNERCENTER_BARPHI	hINNERCENTER_BARPITCH
+	FW1	FC21	300																									
+**BASEPLATE
+1 15
+NO	LABEL	STANDARDTYPE	PRODUCTNAME	B	D	T	BASEPLATEMATERIAL	EDGEDISTANCEY1	EDGEDISTANCEZ1	BOLTNY1	BOLTNZ1	BOLTPHI	BOLTMATERIAL	BOLTLENGTH
+	BS1	NCベース円形鋼管用	M-200-4S-24											
+1 21
+NO	LABEL	B0	D0	CONC	BASEPLATETYPE	B	D	T	SML	EDGEDISTANCEY1	EDGEDISTANCEY2	EDGEDISTANCEZ1	EDGEDISTANCEZ2	BOLTARRANGEMENTTYPE	BOLTNY1	BOLTNY2	BOLTNZ1	BOLTNZ2	BOLTPHI	BOLTMATERIAL
+	BSRC1	50	50	FC21	長方形	900	900	16												
+**WALLOPEN
+1 16
+NO	LABEL	OPENINGTYPE	LRBASE	LR	UDBASE	UD	POSITIONX	POSITIONY	WIDTH	HEIGHT	SLITL	SLITR	SLITB	SLITT	COMMENT
+	OP1		内法から	左	解析芯から	上	500	600	800	1000					
+**DAMPER
+1 17
+NO	LABEL	PRODUCTTYPE	UNITS	PARAMETERS	SELFWEIGHT	VECTOR_X	VECTOR_Y	VECTOR_Z	NATURALPERIOD	DISPLACEMENT	MODEL_FLAG	RIGID_LENGTH	DAMPER_DIRECTION	TANALYSIS	FACTOR	FRAME_RIGIDITY
+	D1	 1:線形ダンパー Kc=0	Cd1(kNs/m):Kd(kN/m)													
+**ISOLATOR
+1 24
+NO	LABEL	PRODUCTTYPE	PRODUCTNAME	SHEARHYSTERESIS	hK1	hK2	hK3	hFY1	hFY2	AXIALHYSTERESIS	vK1	vK2	vK3	vFY1_PLUS	vFY2_PLUS	SELFWEIGHT	RENDERSHAPE	RENDERSIZED	RENDERSIZEH	SETLEVEL	DISPLACEMENT	SPRING	INFLECTION
+	ISO1	NRB	NS060N3	線形	693							2140000	0.1	0.01	1								
+**JOINTLOAD
+6 10
+NO	NAME	TYPE	FX	FY	FZ	MX	MY	MZ	COMMENT
+	J1	DL	10						
+	J2	DL		10					
+	J3	DL			10				
+	J4	DL				10			
+	J5	DL					10		
+	J6	DL						10	
+**MEMBERLOAD
+6 8
+NO	NAME	TYPE	COORDINATE	DIRECTION	WA	WB	COMMENT
+	M1	DL	全体座標系	X方向	10	10	
+	M2	DL	全体座標系	Y方向	10	10	
+	M3	DL	全体座標系	Z方向	10	10	
+	M4	DL	部材座標系	X方向	10	10	
+	M5	DL	部材座標系	Y方向	10	10	
+	M6	DL	部材座標系	Z方向	10	10	
+**SLABLOAD
+1 10
+NO	NAME	DL	LL0	LL1	LL2	LL3	LL4	LLE	COMMENT
+	SL1	1000	1800	1300				900	
+**ANALYSISFLOOR
+（階名）,（階名）
+5 5
+NO	FLOOR	LEVEL	CHILDFLOOR	PARENTFLOOR
+	1			
+	2			
+	3			
+	4			
+	5			
+**GENE
+      1001         0          IFGCMQWG  壁中梁部材中間荷重の伝達方法 0=部材中間荷重とする 1=端部節点荷重とする(端部モーメント=0) 
+      2001         1          IFRPOSC   柱主筋位置の自動設定 0=かぶり70 ピッチ80 1=鉄筋径依存 
+      2002         1          IFRPOSG   大梁主筋位置の自動設定 0=かぶり70 ピッチ80 1=鉄筋径依存上下平均 2=鉄筋径依存上 3=鉄筋径依存下 
+      2003         0          ICCOL     柱中央断面の扱い 0=柱頭断面 1=柱脚断面(中央位置でも断面検定を行う) 
+      3001         0          IFPMS     S造接合部パネルの自動モデル化 0=モデル化しない 1=モデル化する 
+      3002         0          IFPMRC    RC造接合部パネルの自動モデル化 0=モデル化しない 1=モデル化する 
+      3003         0          IFPMSRC   SRC造接合部パネルの自動モデル化 0=モデル化しない 1=モデル化する 
+      3004         0          IFPMCFT   CFT造接合部パネルの自動モデル化 0=モデル化しない 1=モデル化する 
+      4001         0          IFSECG    RC・SRC柱梁の軸・曲げ・せん断剛性評価 0=鉄筋鉄骨を含める 1=含めない 
+      4002         1          IFROTC    柱のねじれ剛性の扱い 0=考慮 1=非考慮(剛性倍率0.00001) 
+      4003         1          IFROTG    梁のねじれ剛性の扱い 0=考慮 1=非考慮(剛性倍率0.00001) 
+      4004         1          IAGCFT    CFT柱のせん断剛性 0=鉄骨のみを考慮 1=鉄骨と中詰めコンクリートの和を考慮 
+      4005         1          IXXCFT    CFT柱のねじれ断剛性 0=鉄骨のみを考慮 1=鉄骨と中詰めコンクリートの和を考慮 
+      4006         0          JSOLV     連立方程式の解法 0=通常のSkyline法 
+      4011         0          KRFDIRC   柱の自動計算による剛域長さ・フェイス長さ 0=周辺部材で評価した長さのうち部材最長の長さ 1=y軸の周辺部材で評価した長さ 2=z軸の周辺部材で評価した長さ 3=全体座標系X軸に近い周辺部材で評価した長さ 4=全体座標系Y軸に近い周辺部材で評価した長さ 
+      4021         1          IFGPHI    スラブによる大梁の曲げ剛性増大率のデフォルト設定 0=スラブの付き方に応じた設定値 1=スラブ有効幅を考慮した自動計算値 
+      4022         0          IFGSL     スラブの付き方に応じた大梁の曲げ剛性増大率における片持スラブの扱い 0=スラブ付きとして考慮する 1=スラブ付きとして考慮しない 
+      4023                 1.6VFGIBI2   スラブの付き方に応じた大梁の曲げ剛性増大率のデフォルト設定値(両側スラブ) 
+      4024                 1.3VFGIBI1   スラブの付き方に応じた大梁の曲げ剛性増大率のデフォルト設定値(片側スラブ) 
+      4025                   1VFGIBI0   スラブの付き方に応じた大梁の曲げ剛性増大率のデフォルト設定値(スラブなし) 
+      4026         2          KRFDIRG   大梁の自動計算による剛域長さ・フェイス位置の設定 0=部材yz軸の長い方 1=y軸(Qy)の値 2=z軸(Qz)の値 3=全体座標系X軸に近い方 4=Y軸に近い方 
+      4040         0          IFRSS     S柱梁同士の取り合いを考慮した剛域長の自動計算 0=自動計算は行わない 1=取り合いを考慮した略算長を設定 
+      4041                 0.5VFRSS     S柱梁同士の取り合いを考慮したパネルサイズ略算長比 
+      4042         0          IFRSRC    S梁とSRC柱の取り合いを考慮した剛域長の自動計算 0=自動計算は行わない 1=取り合いを考慮した略算長を設定 
+      4043                   1VFRSRC    S梁とSRC柱の取り合いを考慮したパネルサイズ略算長比 
+      4044         0          IFRCFT    S梁とCFT柱の取り合いを考慮した剛域長の自動計算 0=自動計算は行わない 1=取り合いを考慮した略算長を設定 
+      4045                0.65VFRCFT    S梁とCFT柱の取り合いを考慮したパネルサイズ略算長比 
+      4050         1          IFFACE    雑壁付RC・SRC部材の剛域・フェイス位置の自動計算法 "0=剛域・フェイス共素断面から決定 雑壁付部材は変断面→変断面" 1=剛域・フェイス共架構内雑壁を考慮して決定→中央部材のみ一様断面 "2=剛域は素断面 フェイスは架構内雑壁を考慮して決定 " 
+      4051         1          IFCNTW    架構内片持壁剛性の考慮法 0=考慮しない 1=一様断面で考慮する 
+      4052         0          IFSLITW   スリット壁剛性の考慮法 0=JSCAスリット指針 1=壁のせいの半分を付加 
+      4053         1          IFZWZC    雑壁付部材のI計算位置 0=素断面図心回り 1=雑壁付断面図心回り 2=素断面のせい等断面積として幅を調整 
+      4060         0          IFWEI     壁柱の曲げ剛性計算時のせい 0=芯々 1=内法 
+      4061         0          IFWFACE   壁柱のフェイス位置 0=節点位置 1=フェイス位置 
+      4062         2          IFWCTS    S壁柱の向きと付帯柱材端条件 0=I(ピン) 1=H(ピン) 2=I(剛) 3=H(剛) 
+      4063         0          IFWCTRC   RC壁柱の向きと付帯柱材端条件 0=I(ピン) 1=H(ピン) 2=I(剛) 3=H(剛) 
+      5001         1          KMDLC     柱モデル、軸力・2軸曲げを受ける梁モデル 0=MyQz材端ヒンジモデル(HG1) 1=N-My-Mz　N-Qy-Qz材端ヒンジモデル(HG3) 2=MSモデル(MS) 3=ファイバーモデル(FB) 
+      5002         0          KMDLG     大梁モデル 0=My　Qz材端ヒンジモデル 1=N-My-Mz　N-Qy-Qz材端ヒンジモデル 2=MSモデル 3=ファイバーモデル 
+      5003         0          KMDLV     材端剛接合ブレースモデル 0=My　Qz材端ヒンジモデル 1=N-My-Mz　N-Qy-Qz材端ヒンジモデル 2=MSモデル 3=ファイバーモデル 
+      5004         0          KMSGC     大梁MSモデルにおける中央弾性部材の軸剛性の扱い 0=ゼロ 1=計算値（このとき、RC・SRC部材では軸力が生じる。） 
+      5005                 100VMSHOS    MSモデル中央部材剛性補正係数の最大値 
+      5010         2          IFMLC     柱圧縮座屈長さの自動計算法 0=材長 1=lk 2=節点間距離 
+      5011         1          IFMUS     S部材曲げ・軸耐力の座屈考慮(N-My-Mz材端ヒンジモデルの場合) 0=非考慮 1=考慮 
+      5012         0          KWEBM     鉄骨ウェブの端部曲げ耐力への考慮 0=全て考慮 1=端部から1/6部分を考慮 2=無視 3:スカラップ長(入力値)を無視 
+      5013         0          KWEBS     鉄骨ウェブの端部せん断耐力への考慮 0=全て考慮 1=スカラップ長(入力値)を無視 
+      5014         0          KNUVDS    ブレースの圧縮耐力（Ds算定時） 0=座屈耐力 "1=座屈後耐力(KNUV CR-4 LDSQU 0=DS用モデル 1=QU用モデルに依存)" 
+      5015         0          KNUVQU    ブレースの圧縮耐力（Qu算定時） 0=座屈耐力 "1=座屈後耐力(KNUV CR-4 LDSQU 0=DS用モデル 1=QU用モデルに依存)" 
+      5016                   2VMLCS     S柱圧縮座屈長さ自動計算値の最大材長比 
+      5017         0          KIQSC     S柱のせん断降伏判定における初期（長期）せん断力の考慮 0=考慮する 1=考慮しない 
+      5018         0          KIQSG     S大梁のせん断降伏判定における初期（長期）せん断力の考慮 0=考慮する 1=考慮しない 
+      5020         1          KULTMZ    "雑壁付RC SRC柱・梁の曲げ耐力算定" 0=雑壁無視 1=雑壁考慮(壁筋＋開口補強筋) 2=雑壁考慮(開口補強筋のみ) 
+      5021         1          KSUGA     "材端ヒンジ法の雑壁なしRC SRC柱・梁の曲げ耐力算定" 0=断面解析によるptとdを使用 1=断面形状から略算したptとdを使用(SRCはSとRCを加算) 
+      5022         0          KSUGAZ    "材端ヒンジ法の雑壁付RC SRC柱・梁の曲げ耐力算定" 0=断面解析によるptとdを使用 1=断面形状から略算したptとdを使用(SRCはSとRCを加算) 
+      5023         1          KMRCR     "RC SRC柱・梁のひび割れ後の剛性低下の有無(せん断) " 0=低下しない(Bi-Lineae) 1=低下する(Tri-Linear:初期剛性の15分の1) 
+      5024         0          IFLQCR    "RC SRC柱・梁のせん断ひび割れ耐力 " 0=技術資料(付1.3-8式) 1=技術資料(付1.3-9式) 2=τcu(Fcの15分の1) 
+      5025         0          KMBQM     "RC SRC柱・梁せん断耐力計算時M/QD計算法" 0=部材内の最大M/最大Q 1=各算定位置のM/Q 
+      5026         2          KULTQZ    "雑壁付RC SRC柱・梁のせん断耐力" 0=素断面 1=変断面 2=素断面と変断面の大きい方 
+      5030         0          KMURC     RC梁の曲げ耐力評価 0=断面解析 1=略算式(HG1のみ) 
+      5031         0          IFLNMNU   RC大梁耐力N-MインターラクションのN軸分割法 0=均等20分割(ショートカットにより軸力ゼロの許容モーメント値が小さめの評価となることがある) 1=軸力分割にN=0を含める 
+      5032         0          IFLGQM    RC柱・梁せん断耐力式の扱い 0=荒川mean式(現法) 1=荒川min式(旧法) 2=トラスアーチ式 
+      5033         0          IFLGQH    RC部材高強度せん断補強筋使用時のせん断耐力計算式 785は必ずトラスアーチ式、1000を超えるケースの選択肢 0=荒川認定式 1=トラスアーチ認定式(ν=0.7(1.0-Fc/140)) 2=トラスアーチ認定式(Fc≦60：ν=0.7(1.0-Fc/140) 
+      5034         0          IFLGQZ    雑壁付RC柱・梁のせん断耐力式 0=技術資料(付1.3-43:QW+QM) 1=技術資料(付1.3-42:QWE) 
+      5035         1          KIQRCC    RC柱のせん断降伏判定における初期（長期）せん断力の考慮 0=考慮する 1=考慮しない 
+      5036         0          KIQRCG    RC大梁のせん断降伏判定における初期（長期）せん断力の考慮 0=考慮する 1=考慮しない 
+      5040         0          KMUSRCG   SRC梁の耐力評価 0=一般化累加(MS HG1 HG2 HG3) 1=単純累加(HG1のみ) 
+      5041         0          KMUSRCC   SRC柱曲げ耐力 0=lk/D＞12の時 長柱の耐力低減を行う 1=行わない 
+      5042                 1.5VMLCSRC   SRC柱圧縮座屈長さ自動計算値の最大材長比 
+      5043         0          KQUSRC    SRC柱・梁せん断荒川耐力式の扱い 0=技術基準 1=SRC規準 
+      5044         1          KIQSRC    SRC柱のせん断降伏判定における初期（長期）せん断力の考慮 0=考慮する 1=考慮しない 
+      5045         0          KIQSRG    SRC大梁のせん断降伏判定における初期（長期）せん断力の考慮 0=考慮する 1=考慮しない 
+      5046         0          KMUCFT    CFT柱曲げ耐力 0=長柱・中柱・短柱の考慮 1=一般化累加(全塑性) 
+      5047                 1.5VMLCCFT   CFT柱圧縮座屈長さ自動計算値の最大材長比 
+      5048         0          KIQCFT    CFT柱のせん断降伏判定における初期（長期）せん断力の考慮 0=考慮する 1=考慮しない 
+      5060         0          KMDLRW    壁柱の弾塑性モデル 0=HG 1=MS->KMDLW 
+      5063         0          IFLWQC    せん断ひび割れ耐力(せん断耐力計算時のγ2を考慮) 0=技術資料(付1.3-25式) 1=技術資料(付1.3-26式) 2=τcu 
+      5064         0          IFLWQR    せん断剛性低下率 0=技術資料(付1.3-29式) 1=初期剛性の1/15 
+      5070         0          KWOPRC    RC耐震壁γ2計算における開口高さの扱い 0=γ2の計算にh/h0も考慮(現法) 1=γ2の計算にh/h0は考慮しない(旧法) 
+      5071         0          IFLGQW    RC耐震壁せん断耐力式の扱い 0=荒川mean式(現法) 1=荒川min式(旧法) 2=荒川mean式(旧法M/QDの制限なし) 3=原子力規準式 
+      5072         1          KIQWRC    RC壁柱のせん断降伏判定における初期(長期)せん断力の考慮 0=考慮する 1=考慮しない 
+      5080         0          KWOPSRC   SRC耐震壁γ2計算における開口高さの扱い 0=γ2の計算にh/h0も考慮(現法) 1=γ2の計算にh/h0は考慮しない(旧法)->KWOPEN 
+      5081         1          KIQWSR    SRC壁柱のせん断降伏判定における初期(長期)せん断力の考慮 0=考慮する 1=考慮しない 
+      5090         0          KMDLSW    弾塑性モデル 0=HG 1=MS->KMDLW 
+      5091         0          KIQWS     鋼板耐力壁柱のせん断降伏判定における初期(長期)せん断力の考慮 0=考慮する 1=考慮しない 
+      5100         0          KISTP     初期(長期)応力の考慮 0=考慮 1=無視 
+      7001         0          IFECC     偏心率の計算領域 0=階全体で計算 1=指定範囲毎に計算して階毎の最大値を取る 2=階全体の計算値と指定範囲毎の最大値 
+      7002         1          IFECST    偏心率・剛性率計算法 0=独立 1=連成 
+      7003         0          IFECZW    偏心率計算における雑壁の扱い 0=考慮しない 1=考慮する 2=考慮した場合としない場合の大きい方とする 
+      7004         0          IFCALK    偏心率計算時における負剛性の扱い(偏心率計算法=独立の場合) 0=負のまま計算 1=K=0とする 2=K=|K| 
+      7005         1          IFSTDD    剛性率計算における剛心位置層間変形の計算方法 0=1次関数補間 1=Q/K 
+      7006         0          IFSTZW    剛性率計算における雑壁の扱い 0=考慮しない 1=考慮する 2=考慮した場合としない場合の大きい方とする 
+      7007         0          IFECQC    偏心率の計算領域を指定する場合の層せん断力中心の計算方法 0=長期軸力の重心 1=指定外力分布の重心 
+      8001         0          KCQUP     耐力壁分担率50％超時の短期応力割増 0=柱MQ割増 1=柱・大梁MQ割増 2=割増しない 
+      8002                 1.3VSTKR1    冷間成形角形鋼管STKRの応力割増(Root1) 
+      8003                 1.4VBCRR1    冷間成形角形鋼管BCRの応力割増(Root1) 
+      8004                 1.1VBCPR1    冷間成形角形鋼管BCPの応力割増(Root1) 
+      8005                 1.4VSTKR2    冷間成形角形鋼管STKRの最下階柱脚の応力割増(Root2・3) 
+      8010         0          KCHML     長期 0=節点位置 1=剛域端 2=フェイス位置 
+      8011         0          KCHMS1    短期(鉛直荷重成分) 0=節点位置 1=剛域端 2=フェイス位置 
+      8012         2          KCHMS2    短期(水平荷重成分) 0=節点位置 1=剛域端 2=フェイス位置 
+      8020         0          KCHMBQ    "RC SRC柱梁せん断耐力計算時のシアスパン比M/Q計算法" "0=M Qともそれぞれ最大値" 1=各位置M/Qの最大値 
+      8021         1          KCHWG     耐力壁付帯梁の断面検定 0=検定する 1=検定しない 
+      8030         1          KCHSZL    S柱圧縮座屈長さの自動計算法 0=材長 1=lk(CFTはlk) 
+      8031         0          KCHSWB    S梁ウエッブの考慮 0=考慮 1=無視 
+      8032         0          KCHSMC    S梁M修正係数Cの考慮 0=考慮 1=未考慮(C=1.0) 
+      8033         0          KCHHYH    S梁保有耐力横補剛の検討 0=行う 1=行わない 
+      8034         0          KCHPS     S接合部パネル検定の有無 0=検定する 1=検定しない 
+      8040         2          KCHZWM1   雑壁付部材Ma計算法 0=雑壁無視 1=雑壁考慮(壁筋＋開口補強筋) 2=雑壁考慮(開口補強筋のみ) 
+      8041         1          KCHZWQ1   雑壁付部材Qa計算法 0=雑壁無視 1=雑壁考慮 
+      8042         0          KCHSBN    短期許容付着応力度の取り方 0=長期の1.5倍(RC規準) 1=2倍(告示) 
+      8043         0          KCHLPW    高強度せん断補強筋長期pwの上限値 0=0.6％ 1=1.2％ 
+      8044         0          KCHRCM    RC大梁Ma計算法 0=断面解析 1=RC規準略算式 
+      8045         1          IFLNMNA   Ma計算が断面解析の場合 大梁許容N-MインターラクションのN軸分割法 0=均等20分割(ショートカットにより軸力ゼロの許容モーメント値が小さめの評価となることがある) 1=軸力分割にN=0を含める 
+      8046         1          KCHPRC    RC接合部パネル検定の有無 0=検定する 1=検定しない 
+      8050         2          KCHZWM2   雑壁付部材Ma計算法 0=無視 1=考慮(壁筋＋開口補強筋) 2=考慮(開口補強筋のみ) 
+      8051         1          KCHZWQ2   雑壁付部材Qa計算法 0=雑壁無視 1=雑壁考慮 
+      8052         0          KCHSRC    SRC長柱の検討 0=行う 1=行わない 
+      8053         0          KCHSRM    軸力を負担しない1軸曲げ応力状態の大梁の許容モーメント計算法 0=SとRCの一般累加 1=SとRCの単純累加 
+      8054         0          KCHPSRC   検定の有無 0=検定する 1=検定しない 
+      8060         1          KCHCFT    CFT長柱・中柱・短柱の検討 0=行う 1=行わない 
+      8061         0          KCHPCFT   検定の有無 0=検定する 1=検定しない 
+      8070         0          KCHWMQ    壁柱軸力・モーメントの付帯柱への割り振り 0=割り振らない 1=Nのみ割り振る 2=Mのみ割り振る "3=N Mを割り振る" 
+      8080         0          LWOPRC    RC耐震壁γ計算における開口高さの扱い 0=γの計算にh/h0も考慮(新法) 1=γの計算にh/h0は考慮しない(旧法) 
+      8081         0          LWRCGM    RC耐震壁γ計算におけるhとlの扱い 0=lは付帯柱外法でhは梁上辺間距離(RC規準2010) 1=lとhはそれぞれ柱と梁の部材芯間距離 
+      8090         0          LWOPSRC   SRC耐震壁γ計算における開口高さの扱い 0=γの計算にh/h0も考慮 1=γの計算にh/h0は考慮しない(旧RC法) 
+      8091         0          LWSRCGM   SRC耐震壁γ計算におけるhとlの扱い 0=lは付帯柱外法でhは梁上辺間距離(SRC規準2014) 1=lとhはそれぞれ柱と梁の部材芯間距離 
+      9001                0.02VQUSTDR   最大層間変形角 
+      9011         0          KQUCQU    柱 0=応力状態に基づいて更新 1=モデル作成時値に固定 
+      9012         0          KQUGQU    梁 0=応力状態に基づいて更新 1=モデル作成時値に固定 
+      9013         0          KQUWQU    耐力壁 0=応力状態に基づいて更新 1=モデル作成時値に固定 
+      9014         0          KQUPQU    接合部パネル 0=応力状態に基づいて更新 1=モデル作成時値に固定 
+      9021         1          LQUCS     S柱せん断降伏 0=ON 1=OFF 
+      9022         1          LQUCRC    RC柱せん断降伏 0=ON 1=OFF 
+      9023         1          LQUCSR    SRC柱せん断降伏 0=ON 1=OFF 
+      9024         1          LQUCCF    CFT柱せん断降伏 0=ON 1=OFF 
+      9031         1          LQUGS     S梁せん断降伏 0=ON 1=OFF 
+      9032         1          LQUGRC    RC梁せん断降伏 0=ON 1=OFF 
+      9033         1          LQUGSR    SRC梁せん断降伏 0=ON 1=OFF 
+      9041         1          LQUBS     Sブレース圧縮降伏 0=ON 1=OFF 
+      9051         1          LQUWS     S耐力壁せん断降伏 0=ON 1=OFF 
+      9052         1          LQUWRC    RC耐力壁せん断降伏 0=ON 1=OFF 
+      9053         1          LQUWSR    SRC耐力壁せん断降伏 0=ON 1=OFF 
+      9061         1          LQUPS     Sパネルせん断降伏 0=ON 1=OFF 
+      9062         1          LQUPRC    RCパネルせん断降伏 0=ON 1=OFF 
+      9063         1          LQUPSR    SRCパネルせん断降伏 0=ON 1=OFF 
+      9064         1          LQUPCF    CFTパネルせん断降伏 0=ON 1=OFF 
+      9071         1          LQUJT     節点ばね引張降伏 0=ON 1=OFF 
+      9072         1          LQUJC     節点ばね圧縮降伏 0=ON 1=OFF 
+      9100         1          KQUSTDL   最大層間変形角 0=ON 1=OFF 
+      9101         1          KQUCS     S柱せん断耐力余裕度 0=ON 1=OFF 
+      9102         1          KQUCRC    RC柱せん断耐力余裕度 0=ON 1=OFF 
+      9103         1          KQUCRCT   RC柱せん断応力比 0=ON 1=OFF 
+      9104         1          KQUCSR    SRC柱せん断耐力余裕度 0=ON 1=OFF 
+      9105         1          KQUCCF    CFT柱せん断耐力余裕度 0=ON 1=OFF 
+      9106         1          KQUAS     S柱軸力比 0=ON 1=OFF 
+      9107         1          KQUARC    RC柱軸力比 0=ON 1=OFF 
+      9108         1          KQUARCS   RC柱軸応力比 0=ON 1=OFF 
+      9109         1          KQUASR    SRC柱軸力比 0=ON 1=OFF 
+      9110         1          KQUACF    CFT柱軸力比 0=ON 1=OFF 
+      9121         1          KQUGS     S梁せん断耐力余裕度 0=ON 1=OFF 
+      9122         1          KQUGRC    RC梁せん断耐力余裕度 0=ON 1=OFF 
+      9123         1          KQUGRCT   RC梁せん断応力比 0=ON 1=OFF 
+      9124         1          KQUGSR    SRC梁せん断耐力余裕度 0=ON 1=OFF 
+      9125         1          KQUBS     Sブレース圧縮耐力余裕度 0=ON 1=OFF 
+      9131         1          KQUWS     S耐力壁せん断耐力余裕度 0=ON 1=OFF 
+      9132         1          KQUWRC    RC耐力壁せん断耐力余裕度 0=ON 1=OFF 
+      9133         1          KQUWRCT   RC耐力壁せん断応力比 0=ON 1=OFF 
+      9134         1          KQUWSR    SRC耐力壁せん断耐力余裕度 0=ON 1=OFF 
+      9141         1          KQUPS     Sパネルせん断耐力余裕度 0=ON 1=OFF 
+      9142         1          KQUPRC    RCパネルせん断耐力余裕度 0=ON 1=OFF 
+      9143         1          KQUPSR    SRCパネルせん断耐力余裕度 0=ON 1=OFF 
+      9144         1          KQUPCF    CFTパネルせん断耐力余裕度 0=ON 1=OFF 
+      9145         1          KQUJT     節点ばね引張降伏 0=ON 1=OFF 
+      9146         1          KQUJC     節点ばね圧縮降伏 0=ON 1=OFF 
+      9150                0.01VQUSTDL   最大層間変形角 
+      9151                 1.1VQUCS     S柱せん断耐力余裕度 
+      9152                 1.1VQUCRC1   RC柱せん断耐力余裕度(両端ヒンジ) 
+      9153                 1.2VQUCRC2   RC柱せん断耐力余裕度(両端ヒンジ以外) 
+      9154                0.15VQUCRCT   RC柱せん断応力(τ/Fc) 
+      9155                 1.1VQUCSR1   SRC柱せん断耐力余裕度(両端ヒンジ) 
+      9156                 1.2VQUCSR2   SRC柱せん断耐力余裕度(両端ヒンジ以外) 
+      9157                 1.1VQUCCF    CFT柱せん断耐力余裕度 
+      9158                 0.6VQUAS     S柱軸力比 
+      9159                0.55VQUARC    RC柱軸力比 
+      9160                0.55VQUARCS   RC柱軸応力比(σ/Fc) 
+      9161                 0.4VQUASR    SRC柱軸力比 
+      9162                 0.7VQUACF    CFT柱軸力比 
+      9171                 1.1VQUGS     S梁せん断力余裕度 
+      9172                 1.1VQUGRC1   RC梁せん断力余裕度(両端ヒンジ) 
+      9173                 1.2VQUGRC2   RC梁せん断力余裕度(両端ヒンジ以外) 
+      9174                 0.2VQUGRCT   RC梁せん断応力比(τ/Fc) 
+      9175                 1.1VQUGSR1   SRC梁せん断力余裕度(両端ヒンジ) 
+      9176                 1.2VQUGSR2   SRC梁せん断力余裕度(両端ヒンジ以外) 
+      9177                   1VQUBS     Sブレース圧縮耐力余裕度 
+      9181                1.25VQUWS     S耐力壁せん断力余裕度 
+      9182                1.25VQUWRC    RC耐力壁せん断力余裕度 
+      9183                0.25VQUWRCT   RC耐力壁せん断応力比(τ/Fc) 
+      9184                1.25VQUWSR    SRC耐力壁せん断力余裕度 
+      9185                   1VQUPS     Sパネルせん断力余裕度 
+      9186                 1.1VQUPRC    RCパネルせん断力余裕度 
+      9187                 1.1VQUPSR    SRCパネルせん断力余裕度 
+      9188                 1.1VQUPCF    CFTパネルせん断力余裕度 
+      9201                0.02VQNSTDR   層間変形角 
+      9211         0          KQNCQU    柱 0=応力状態に基づいて更新 1=モデル作成時値に固定 
+      9212         0          KQNGQU    梁 0=応力状態に基づいて更新 1=モデル作成時値に固定 
+      9213         0          KQNWQU    耐力壁 0=応力状態に基づいて更新 1=モデル作成時値に固定 
+      9214         0          KQNPQU    接合部パネル 0=応力状態に基づいて更新 1=モデル作成時値に固定 
+      9221         1          LQNCS     S柱せん断降伏 0=ON 1=OFF 
+      9222         1          LQNCRC    RC柱せん断降伏 0=ON 1=OFF 
+      9223         1          LQNCSR    SRC柱せん断降伏 0=ON 1=OFF 
+      9224         1          LQNCCF    CFT柱せん断降伏 0=ON 1=OFF 
+      9231         1          LQNGS     S梁せん断降伏 0=ON 1=OFF 
+      9232         1          LQNGRC    RC梁せん断降伏 0=ON 1=OFF 
+      9233         1          LQNGSR    SRC梁せん断降伏 0=ON 1=OFF 
+      9241         1          LQNBS     Sブレース圧縮降伏 0=ON 1=OFF 
+      9251         1          LQNWS     S耐力壁せん断降伏 0=ON 1=OFF 
+      9252         1          LQNWRC    RC耐力壁せん断降伏 0=ON 1=OFF 
+      9253         1          LQNWSR    SRC耐力壁せん断降伏 0=ON 1=OFF 
+      9261         1          LQNPS     Sパネルせん断降伏 0=ON 1=OFF 
+      9262         1          LQNPRC    RCパネルせん断降伏 0=ON 1=OFF 
+      9263         1          LQNPSR    SRCパネルせん断降伏 0=ON 1=OFF 
+      9264         1          LQNPCF    CFTパネルせん断降伏 0=ON 1=OFF 
+      9271         1          LQNJT     節点ばね引張降伏 0=ON 1=OFF 
+      9272         1          LQNJC     節点ばね圧縮降伏 0=ON 1=OFF 
+      9301                0.35VQNSHA    ランク判定に考慮する柱部材軸決定のための負担せん断力の成分比 
+      9302                  50VQNANG    柱部材軸に対して考慮する梁の接続の接続角度(度) 
+      9303                   2VQNALP    未崩壊部分の崩壊形想定のための応力割増係数αの最大値 
+      9311         1          KQNSN     SN材H形鋼のランク判定 0=幅圧比による 1=SN材式による 
+      9312         0          KQNSTR    冷間成形角形鋼管：各階の柱、梁、接合部パネルの耐力合計値の比較 0=行う 1=行わない 
+      9313         0          KQNCRC    RC柱シアスパン比の計算方法 0=H0/D 1=max(H0/D、崩壊形2M/(QD)) 
+      9314         0          KQNSRCS   SRC鉄骨比の計算におけるSRC断面の曲げ耐力計算法 0=一般化累加 1=単純累加 
+      9315         0          KQNSRCR   SRC梁の取り付くSRC柱のせん断力集計用ランク判定 "0=SRC柱 SC柱の個材ランクで判定(降伏しているSRC梁は考慮しない)" 1=SRC柱の個材ランクで判定(降伏しているSRC梁は考慮しない) 2=降伏箇所のランクにより判定 
+      9316         0          KQNCFTR   CFT柱のランク判定 0=CFT指針による 1=SRCの判定基準による 
+      9330         0          KQNCRC    RC柱せん断耐力余裕度 0=ON 1=OFF 
+      9332         1          KQNCSR    SRC柱せん断耐力余裕度 0=ON 1=OFF 
+      9333         0          KQNGRC    RC梁せん断耐力余裕度 0=ON 1=OFF 
+      9334         1          KQNGSR    SRC梁せん断耐力余裕度 0=ON 1=OFF 
+      9335         0          KQNWRC    RC耐力壁せん断耐力余裕度 0=ON 1=OFF 
+      9336         1          KQNWSR    SRC耐力壁せん断耐力余裕度 0=ON 1=OFF 
+      9337         0          KQNPRC    RCパネルせん断耐力余裕度 0=ON 1=OFF 
+      9338         1          KQNPSR    SRCパネルせん断耐力余裕度 0=ON 1=OFF 
+      9341                 1.1VQNCRC1   RC柱せん断耐力余裕度(両端ヒンジ) 
+      9342                 1.2VQNCRC2   RC柱せん断耐力余裕度(両端ヒンジ以外) 
+      9343                 1.1VQNCSR1   SRC柱せん断耐力余裕度(両端ヒンジ) 
+      9344                 1.2VQNCSR2   SRC柱せん断耐力余裕度(両端ヒンジ以外) 
+      9351                 1.1VQNGRC1   RC梁せん断力余裕度(両端ヒンジ) 
+      9352                 1.2VQNGRC2   RC梁せん断力余裕度(両端ヒンジ以外) 
+      9353                 1.1VQNGSR1   SRC梁せん断力余裕度(両端ヒンジ) 
+      9354                 1.2VQNGSR2   SRC梁せん断力余裕度(両端ヒンジ以外) 
+      9361                1.25VQNWRC    RC耐力壁せん断力余裕度 
+      9362                   1VQNWSR    SRC耐力壁せん断力余裕度 
+      9363                 1.1VQNPRC    RCパネルせん断力余裕度 
+      9364                   1VQNPSR    SRCパネルせん断力余裕度 
+      9371         1          KQNCGPC   柱梁耐力比の検討 0=行う 1=行わない 
+      9372         1          KQNCQU    柱耐力を集計した保有水平耐力の計算 0=行う 1=行わない 
+      9381         0          KQNRBF    鉄筋の付着強度に対する検討（梁） 0=行う 1=行わない 
+      9382         0          KQNRBT    接合部内通し筋の付着強度に対する検討（梁） 0=行う 1=行わない 
+      9383         0          KQNRBC    鉄筋の定着強度に対する検討（梁） 0=行う 1=行わない 
+**ANALYSISCONDITION
+0
+**JOINT
+30
+UUID	X	Y	Z
+{b43ed88c-b224-455a-90e8-7124b0612548}	0	0	0.1
+1	1	
+2	Y1	X1	
+{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	0	0	5.1
+1	2	
+2	Y1	X1	
+{b77f27bc-43dd-4589-8e2d-9e426efb8bbc}	3.06162e-16	5	0.1
+1	1	
+2	Y1	X2	
+{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	3.06162e-16	5	5.1
+1	2	
+2	Y1	X2	
+{05e7d115-f212-4603-b970-0b8601d875c5}	5	0	0.1
+1	1	
+2	X1	Y2	
+{894ea0c5-c934-4e28-a585-aa71b3560c1e}	5	0	5.1
+1	2	
+2	X1	Y2	
+{f79894b2-4d4a-478c-90f4-92c90674130f}	5	5	0.1
+1	1	
+2	X2	Y2	
+{3d8e7da2-6215-4355-9563-eaefa87b9922}	5	5	5.1
+1	2	
+2	X2	Y2	
+{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	0	0	9.1
+1	3	
+2	Y1	X1	
+{0117256f-4102-4dce-bf45-05c1902b4a4e}	3.06162e-16	5	9.1
+1	3	
+2	Y1	X2	
+{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	5	0	9.1
+1	3	
+2	X1	Y2	
+{78d70dc6-77d7-45fa-a748-266aa64f7783}	5	5	9.1
+1	3	
+2	X2	Y2	
+{ed905499-ae29-4f95-aed0-f66daccf43ac}	0	0	13.1
+1	4	
+2	Y1	X1	
+{ff119e8a-3362-48cc-bdf3-e6b0783733fa}	3.06162e-16	5	13.1
+1	4	
+2	Y1	X2	
+{426fa677-8d49-4ff7-be36-263ecb84875a}	5	0	13.1
+1	4	
+2	X1	Y2	
+{6fd859f1-dfdc-434c-9f29-a3b02ab115ea}	5	5	13.1
+1	4	
+2	X2	Y2	
+{7abbcf9b-e41c-458a-a697-b32a6ac7bfe4}	0	0	17.1
+1	5	
+2	Y1	X1	
+{55003571-0ede-4d9a-973c-8638e771fbc9}	3.06162e-16	5	17.1
+1	5	
+2	Y1	X2	
+{bbce0845-fd14-4261-b344-1f264d9e126e}	5	0	17.1
+1	5	
+2	X1	Y2	
+{19de95df-1949-4777-a6a2-afa449644807}	5	5	17.1
+1	5	
+2	X2	Y2	
+{0a9e042f-d5ff-412b-a174-f8b5f6e26524}	2.5	0	0.1
+1	1	
+1	X1	
+{e929c332-242d-4e8e-a9ca-60be891f91ef}	2.5	5	0.1
+1	1	
+1	X2	
+{c7b0bd6c-ca0f-44ed-aab3-dc7b0e9943cb}	2.5	0	5.1
+1	2	
+1	X1	
+{cdf1a9fe-30d8-4d5a-96fb-e83e98b6651b}	2.5	5	5.1
+1	2	
+1	X2	
+{42184f5f-c3b5-4c66-a692-25fb44b3a668}	2.5	0	9.1
+1	3	
+1	X1	
+{656a5c10-dfbc-4ad1-a0d6-21e49e73cd64}	2.5	5	9.1
+1	3	
+1	X2	
+{dbf582de-8d1f-4f94-9425-d5b3f3636be1}	2.5	0	13.1
+1	4	
+1	X1	
+{c385c30a-b1a7-4650-8af8-fff6b0cc0b57}	2.5	5	13.1
+1	4	
+1	X2	
+{4f0d494f-9bde-4593-87a8-2af975c4b52b}	2.5	0	17.1
+1	5	
+1	X1	
+{2509fd16-c344-4af0-ae86-d7130df2789d}	2.5	5	17.1
+1	5	
+1	X2	
+**COLUMN_MEMBER
+15
+UUID	No
+{c058cfd5-444f-4755-a2a0-4bd70002efc5}	1
+2	{b43ed88c-b224-455a-90e8-7124b0612548}	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	
+0	RC1	0	0	0	0	0	0	0	1	2	1200	1200	0.5	0.5					
+{7cd7baf5-c0b1-4447-b2d4-95e492b1cbd3}	2
+2	{b77f27bc-43dd-4589-8e2d-9e426efb8bbc}	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	
+0	RC1	0	0	0	0	0	0	0	1	2	1200	1200	0.5	0.5					
+{2d72acc9-dc66-4a86-910e-abde0b2cc5f4}	3
+2	{05e7d115-f212-4603-b970-0b8601d875c5}	{894ea0c5-c934-4e28-a585-aa71b3560c1e}	
+0	RC2	0	0	0	0	0	0	0	1	2	1200	1200	0.5	0.5					
+{d126d32d-ff24-46e4-8ff2-943b327953c7}	4
+2	{f79894b2-4d4a-478c-90f4-92c90674130f}	{3d8e7da2-6215-4355-9563-eaefa87b9922}	
+0	RC2	0	0	0	0	0	0	0	1	2	1200	1200	0.5	0.5					
+{aee5f324-5135-425f-9406-7cb4e5d47227}	5
+2	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	
+0	SC1	0	0	0	0	0	0	0	0	2	1200	1200	0.5	0.5					
+{a51efbed-ef50-41a4-908a-64e8b0cb3793}	6
+2	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	{0117256f-4102-4dce-bf45-05c1902b4a4e}	
+0	SC1	0	0	0	0	0	0	0	0	2	1200	1200	0.5	0.5					
+{aae4508c-9a7f-4e01-94ff-42750b7356be}	7
+2	{894ea0c5-c934-4e28-a585-aa71b3560c1e}	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	
+0	SC1	0	0	0	0	0	0	0	0	2	1200	1200	0.5	0.5					
+{b60eb91a-1963-4d90-ae87-3c6e29d8470d}	9
+2	{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	{ed905499-ae29-4f95-aed0-f66daccf43ac}	
+0	SRC1	0	0	0	0	0	0	0	1	2	1200	1200	0.5	0.5					
+{fdf22333-0a6a-42c9-bb1c-f42f32f25f4e}	10
+2	{0117256f-4102-4dce-bf45-05c1902b4a4e}	{ff119e8a-3362-48cc-bdf3-e6b0783733fa}	
+0	SRC1	0	0	0	0	0	0	0	1	2	1200	1200	0.5	0.5					
+{6a7c21af-c244-4c74-af5e-2343da15af4c}	11
+2	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	{426fa677-8d49-4ff7-be36-263ecb84875a}	
+0	SRC1	0	0	0	0	0	0	0	1	2	1200	1200	0.5	0.5					
+{7072362e-6566-46bc-9693-21a3b25e4047}	12
+2	{78d70dc6-77d7-45fa-a748-266aa64f7783}	{6fd859f1-dfdc-434c-9f29-a3b02ab115ea}	
+0	SRC1	0	0	0	0	0	0	0	1	2	1200	1200	0.5	0.5					
+{1346e291-0558-4f3c-8d7d-7bd96a938e53}	13
+2	{ed905499-ae29-4f95-aed0-f66daccf43ac}	{7abbcf9b-e41c-458a-a697-b32a6ac7bfe4}	
+0	CFTC1	0	0	0	0	0	0	0	0	2	1200	1200	0.5	0.5					
+{a758bd61-1448-4567-93c7-3d5bbf4cf87b}	14
+2	{ff119e8a-3362-48cc-bdf3-e6b0783733fa}	{55003571-0ede-4d9a-973c-8638e771fbc9}	
+0	CFTC1	0	0	0	0	0	0	0	0	2	1200	1200	0.5	0.5					
+{1b7e0e67-402d-4788-a148-f179d7bea668}	15
+2	{426fa677-8d49-4ff7-be36-263ecb84875a}	{bbce0845-fd14-4261-b344-1f264d9e126e}	
+0	CFTC1	0	0	0	0	0	0	0	0	2	1200	1200	0.5	0.5					
+{c8fe614a-182b-4fd8-8208-cf33d8e44ac5}	16
+2	{6fd859f1-dfdc-434c-9f29-a3b02ab115ea}	{19de95df-1949-4777-a6a2-afa449644807}	
+0	CFTC1	0	0	0	0	0	0	0	0	2	1200	1200	0.5	0.5					
+**GIRDER_MEMBER
+20
+UUID	No
+{5c05da37-133d-4892-8d9e-22965d5feb11}	17
+2	{b43ed88c-b224-455a-90e8-7124b0612548}	{b77f27bc-43dd-4589-8e2d-9e426efb8bbc}	
+1	RCG1	0	0	0	0	0	250	250	1	2	1200	1200	0.25	0.25					
+{69af9882-1a94-4474-999c-a02ca54b8a47}	18
+2	{05e7d115-f212-4603-b970-0b8601d875c5}	{f79894b2-4d4a-478c-90f4-92c90674130f}	
+1	RCG1	0	0	0	0	0	350	350	1	2	1200	1200	0.25	0.25					
+{782d59ce-4854-4211-9a50-5752f7754239}	19
+3	{b43ed88c-b224-455a-90e8-7124b0612548}	{0a9e042f-d5ff-412b-a174-f8b5f6e26524}	{05e7d115-f212-4603-b970-0b8601d875c5}	
+1	RCG1	0	0	0	0	0	250	350	1	2	1200	1200	0.25	0.25					
+{376fc08d-1dd0-434c-97c7-927178515008}	20
+3	{b77f27bc-43dd-4589-8e2d-9e426efb8bbc}	{e929c332-242d-4e8e-a9ca-60be891f91ef}	{f79894b2-4d4a-478c-90f4-92c90674130f}	
+1	RCG1	0	0	0	0	0	250	350	1	2	1200	1200	0.25	0.25					
+{bd1baa31-5f6f-460e-a11b-6624580338a7}	21
+2	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	
+1	RCG1	0	0	0	0	0	250	250	1	2	1200	1200	0.25	0.25					
+{440efa81-9489-47c1-9fc5-ef53c72d8904}	22
+2	{894ea0c5-c934-4e28-a585-aa71b3560c1e}	{3d8e7da2-6215-4355-9563-eaefa87b9922}	
+1	RCG1	0	0	0	0	0	350	350	1	2	1200	1200	0.25	0.25					
+{9cb05a20-b179-4525-9508-1c19fafe8f90}	23
+3	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	{c7b0bd6c-ca0f-44ed-aab3-dc7b0e9943cb}	{894ea0c5-c934-4e28-a585-aa71b3560c1e}	
+1	RCG1	0	0	0	0	0	250	350	1	2	1200	1200	0.25	0.25					
+{ae5a240c-972a-416e-844b-735eaad21d06}	24
+3	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	{cdf1a9fe-30d8-4d5a-96fb-e83e98b6651b}	{3d8e7da2-6215-4355-9563-eaefa87b9922}	
+1	RCG1	0	0	0	0	0	250	350	1	2	1200	1200	0.25	0.25					
+{8e3322b5-eab0-4d18-a788-15fdc7aeb570}	25
+2	{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	{0117256f-4102-4dce-bf45-05c1902b4a4e}	
+1	SG1	0	0	0	0	0	400	400	0	1	1200	1200	0.25	0.25					
+{273e18be-65f7-4708-b05a-c05fc2de9dd0}	26
+2	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	{78d70dc6-77d7-45fa-a748-266aa64f7783}	
+1	SG1	0	0	0	0	0	400	400	0	1	1200	1200	0.25	0.25					
+{44c508c4-8768-4467-b7bf-73e551be9087}	27
+3	{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	{42184f5f-c3b5-4c66-a692-25fb44b3a668}	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	
+1	SG1	0	0	0	0	0	400	400	0	1	1200	1200	0.25	0.25					
+{c1d4d5e9-c0ad-4c59-9640-508690330bfc}	28
+3	{0117256f-4102-4dce-bf45-05c1902b4a4e}	{656a5c10-dfbc-4ad1-a0d6-21e49e73cd64}	{78d70dc6-77d7-45fa-a748-266aa64f7783}	
+1	SG1	0	0	0	0	0	400	400	0	1	1200	1200	0.25	0.25					
+{1a1fd51c-f279-49aa-a56c-6a99c98888ad}	29
+2	{ed905499-ae29-4f95-aed0-f66daccf43ac}	{ff119e8a-3362-48cc-bdf3-e6b0783733fa}	
+1	GSRC1	0	0	0	0	0	400	400	1	2	1200	1200	0.25	0.25					
+{db11b2c8-ff99-46c5-81a7-ef2798afbb2e}	30
+2	{426fa677-8d49-4ff7-be36-263ecb84875a}	{6fd859f1-dfdc-434c-9f29-a3b02ab115ea}	
+1	GSRC1	0	0	0	0	0	400	400	1	2	1200	1200	0.25	0.25					
+{ec7ea3ad-8930-4d9f-bacf-29ed00b14f50}	31
+3	{ed905499-ae29-4f95-aed0-f66daccf43ac}	{dbf582de-8d1f-4f94-9425-d5b3f3636be1}	{426fa677-8d49-4ff7-be36-263ecb84875a}	
+1	GSRC1	0	0	0	0	0	400	400	1	2	1200	1200	0.25	0.25					
+{079718b5-523c-495c-84f4-c50f8a1ed4ec}	32
+3	{ff119e8a-3362-48cc-bdf3-e6b0783733fa}	{c385c30a-b1a7-4650-8af8-fff6b0cc0b57}	{6fd859f1-dfdc-434c-9f29-a3b02ab115ea}	
+1	GSRC1	0	0	0	0	0	400	400	1	2	1200	1200	0.25	0.25					
+{4cd98c5e-1a3d-4056-8641-86f3071728f7}	33
+2	{7abbcf9b-e41c-458a-a697-b32a6ac7bfe4}	{55003571-0ede-4d9a-973c-8638e771fbc9}	
+1	GSRC1	0	0	0	0	0	250	250	1	2	1200	1200	0.25	0.25					
+{622a7c5f-0c71-463d-8eb8-079dd68297e4}	34
+2	{bbce0845-fd14-4261-b344-1f264d9e126e}	{19de95df-1949-4777-a6a2-afa449644807}	
+1	GSRC1	0	0	0	0	0	250	250	1	2	1200	1200	0.25	0.25					
+{3f7916b1-ad3a-437f-b571-c7d544cd5445}	35
+3	{7abbcf9b-e41c-458a-a697-b32a6ac7bfe4}	{4f0d494f-9bde-4593-87a8-2af975c4b52b}	{bbce0845-fd14-4261-b344-1f264d9e126e}	
+1	GSRC1	0	0	0	0	0	250	250	1	2	1200	1200	0.25	0.25					
+{0eee8c54-c078-4246-bd2a-b5dfe4844a6f}	36
+3	{55003571-0ede-4d9a-973c-8638e771fbc9}	{2509fd16-c344-4af0-ae86-d7130df2789d}	{19de95df-1949-4777-a6a2-afa449644807}	
+1	GSRC1	0	0	0	0	0	250	250	1	2	1200	1200	0.25	0.25					
+**BRACE_MEMBER
+1
+UUID	No
+{c1d3219a-1351-4c3c-9367-2e74885e3030}	37
+2	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	
+2	V1	0	0	0	0	0	250	400	0	1	1200	1200	0.25	0.25					
+**BEAM_MEMBER
+5
+UUID	No
+{a82628b1-cbae-4b3f-8a96-06da2fdc5dc0}	38
+2	{0a9e042f-d5ff-412b-a174-f8b5f6e26524}	{e929c332-242d-4e8e-a9ca-60be891f91ef}	
+3	BRC1	0	0	0	0	0	200	200	1	2	1200	1200	0.25	0.25					
+{e7af0ef7-1bac-4d83-bed0-529a72f5377f}	39
+2	{c7b0bd6c-ca0f-44ed-aab3-dc7b0e9943cb}	{cdf1a9fe-30d8-4d5a-96fb-e83e98b6651b}	
+3	BRC1	0	0	0	0	0	200	200	1	2	1200	1200	0.25	0.25					
+{d57afff4-ca7f-4d7d-9386-9d5b8ff44d62}	40
+2	{42184f5f-c3b5-4c66-a692-25fb44b3a668}	{656a5c10-dfbc-4ad1-a0d6-21e49e73cd64}	
+3	SB1	0	0	0	0	0	62.5	62.5	0	1	1200	1200	0.25	0.25					
+{d250aee3-85a1-40d8-b962-4bf6dd9bf43b}	41
+2	{dbf582de-8d1f-4f94-9425-d5b3f3636be1}	{c385c30a-b1a7-4650-8af8-fff6b0cc0b57}	
+3	SRCB1	0	0	0	0	0	250	250	1	2	1200	1200	0.25	0.25					
+{0ee66b9c-1a5e-467c-8bb5-67bed795c2e6}	42
+2	{4f0d494f-9bde-4593-87a8-2af975c4b52b}	{2509fd16-c344-4af0-ae86-d7130df2789d}	
+3	SRCB1	0	0	0	0	0	250	250	1	2	1200	1200	0.25	0.25					
+**SLAB_MEMBER
+10
+UUID	No
+{89e8c2f4-4620-4ab7-a443-ffd9fcdf2709}	43
+4	{b77f27bc-43dd-4589-8e2d-9e426efb8bbc}	{e929c332-242d-4e8e-a9ca-60be891f91ef}	{0a9e042f-d5ff-412b-a174-f8b5f6e26524}	{b43ed88c-b224-455a-90e8-7124b0612548}	
+4	S1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{e87b44b1-7882-4d84-9d99-2b960089cf69}	44
+4	{e929c332-242d-4e8e-a9ca-60be891f91ef}	{f79894b2-4d4a-478c-90f4-92c90674130f}	{05e7d115-f212-4603-b970-0b8601d875c5}	{0a9e042f-d5ff-412b-a174-f8b5f6e26524}	
+4	S1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{8f2e9abc-f515-4dfc-ae4f-03a158c63f8c}	45
+4	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	{cdf1a9fe-30d8-4d5a-96fb-e83e98b6651b}	{c7b0bd6c-ca0f-44ed-aab3-dc7b0e9943cb}	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	
+4	S1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{d6644460-5535-4907-afa6-e020242d62ed}	46
+4	{cdf1a9fe-30d8-4d5a-96fb-e83e98b6651b}	{3d8e7da2-6215-4355-9563-eaefa87b9922}	{894ea0c5-c934-4e28-a585-aa71b3560c1e}	{c7b0bd6c-ca0f-44ed-aab3-dc7b0e9943cb}	
+4	S1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{526f9950-37da-446f-a045-72c446c72f62}	47
+4	{0117256f-4102-4dce-bf45-05c1902b4a4e}	{656a5c10-dfbc-4ad1-a0d6-21e49e73cd64}	{42184f5f-c3b5-4c66-a692-25fb44b3a668}	{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	
+4	S1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{92edc0d0-519b-4ff5-acf4-935b36d5dc00}	48
+4	{656a5c10-dfbc-4ad1-a0d6-21e49e73cd64}	{78d70dc6-77d7-45fa-a748-266aa64f7783}	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	{42184f5f-c3b5-4c66-a692-25fb44b3a668}	
+4	S1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{90407077-1727-467b-908b-4dc8e4856ca6}	49
+4	{ff119e8a-3362-48cc-bdf3-e6b0783733fa}	{c385c30a-b1a7-4650-8af8-fff6b0cc0b57}	{dbf582de-8d1f-4f94-9425-d5b3f3636be1}	{ed905499-ae29-4f95-aed0-f66daccf43ac}	
+4	S1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{62a97f36-52f2-4c17-aa0e-a5ba3c76a2d9}	50
+4	{c385c30a-b1a7-4650-8af8-fff6b0cc0b57}	{6fd859f1-dfdc-434c-9f29-a3b02ab115ea}	{426fa677-8d49-4ff7-be36-263ecb84875a}	{dbf582de-8d1f-4f94-9425-d5b3f3636be1}	
+4	S1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{539a887d-819e-4855-97b6-7c3e14e70894}	51
+4	{55003571-0ede-4d9a-973c-8638e771fbc9}	{2509fd16-c344-4af0-ae86-d7130df2789d}	{4f0d494f-9bde-4593-87a8-2af975c4b52b}	{7abbcf9b-e41c-458a-a697-b32a6ac7bfe4}	
+4	S1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{a4854e07-19bd-435d-b090-49c230e56e72}	52
+4	{2509fd16-c344-4af0-ae86-d7130df2789d}	{19de95df-1949-4777-a6a2-afa449644807}	{bbce0845-fd14-4261-b344-1f264d9e126e}	{4f0d494f-9bde-4593-87a8-2af975c4b52b}	
+4	S1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+**WALL_MEMBER
+2
+UUID	No
+{93c07fa4-05a3-4189-ab29-166df841f3b6}	53
+6	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	{c7b0bd6c-ca0f-44ed-aab3-dc7b0e9943cb}	{894ea0c5-c934-4e28-a585-aa71b3560c1e}	{05e7d115-f212-4603-b970-0b8601d875c5}	{0a9e042f-d5ff-412b-a174-f8b5f6e26524}	{b43ed88c-b224-455a-90e8-7124b0612548}	
+5	WRC1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{079587b4-6c5d-4c5f-8e84-61a778ee5476}	54
+6	{dbf582de-8d1f-4f94-9425-d5b3f3636be1}	{426fa677-8d49-4ff7-be36-263ecb84875a}	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	{42184f5f-c3b5-4c66-a692-25fb44b3a668}	{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	{ed905499-ae29-4f95-aed0-f66daccf43ac}	
+5	SW1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+**UWALL_MEMBER
+1
+UUID	No
+{8fb9a785-a7b4-4709-a32a-dc4b51c4f376}	55
+6	{cdf1a9fe-30d8-4d5a-96fb-e83e98b6651b}	{3d8e7da2-6215-4355-9563-eaefa87b9922}	{f79894b2-4d4a-478c-90f4-92c90674130f}	{e929c332-242d-4e8e-a9ca-60be891f91ef}	{b77f27bc-43dd-4589-8e2d-9e426efb8bbc}	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	
+6	FW1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+**DAMPER_MEMBER
+1
+UUID	No
+{28a94cf2-6716-4ee2-a44c-3ed9d1ff125d}	56
+2	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	{78d70dc6-77d7-45fa-a748-266aa64f7783}	
+9	D1	0	0	0	0	0	0	0	0	2	1500	1500	1	0					
+**ISOLATOR_MEMBER
+1
+UUID	No
+{955bf21a-a3eb-4c89-9dbc-e8660807022e}	57
+2	{3d8e7da2-6215-4355-9563-eaefa87b9922}	{78d70dc6-77d7-45fa-a748-266aa64f7783}	
+10	ISO1	0	0	0	0	0	0	0	0	2	1500	1500	1	0					
+**JOINTLOAD_MEMBER
+18
+UUID	No
+{07bbb87e-d138-42fe-abe4-72c66bb5f2e9}	58
+1	{b77f27bc-43dd-4589-8e2d-9e426efb8bbc}	
+11	J1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{fc38411d-c4fd-4681-98ab-78578d991cb3}	59
+1	{b43ed88c-b224-455a-90e8-7124b0612548}	
+11	J1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{a72c1303-ed50-4ef3-88ac-d164cd80d4b5}	60
+1	{05e7d115-f212-4603-b970-0b8601d875c5}	
+11	J2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{81492495-41c2-45a9-bfa4-062d5eb93ece}	61
+1	{f79894b2-4d4a-478c-90f4-92c90674130f}	
+11	J2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{4ac6be01-da5e-4702-b332-b08f0bfc6d61}	62
+1	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	
+11	J3	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{04caefa3-3155-4b50-b3e5-0abea31b3111}	63
+1	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	
+11	J3	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{39566795-bbb4-4732-ab3a-40287516ab2d}	64
+1	{894ea0c5-c934-4e28-a585-aa71b3560c1e}	
+11	J4	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{d77437a2-b27f-4741-92eb-77326e1d378d}	65
+1	{3d8e7da2-6215-4355-9563-eaefa87b9922}	
+11	J4	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{e01f5193-ede3-48fb-935d-572b0af6f155}	66
+1	{0117256f-4102-4dce-bf45-05c1902b4a4e}	
+11	J5	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{ae110a4e-e576-4616-8ed7-ab2093939a3c}	67
+1	{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	
+11	J5	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{92770b47-677b-4f03-9175-84f351fffccb}	68
+1	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	
+11	J6	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{96d36dd2-27bf-4468-aa2b-9059b871b4ba}	69
+1	{78d70dc6-77d7-45fa-a748-266aa64f7783}	
+11	J6	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{7c0610e5-2946-4aeb-9e10-5434ec1ea0d0}	70
+1	{dbf582de-8d1f-4f94-9425-d5b3f3636be1}	
+11	J1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{2028ff01-2f8a-42cf-bc36-516e5a797271}	71
+1	{ed905499-ae29-4f95-aed0-f66daccf43ac}	
+11	J1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{1352e273-8b4f-4909-b5d7-688be0ac4901}	72
+1	{426fa677-8d49-4ff7-be36-263ecb84875a}	
+11	J1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{ff21d0dd-2759-4765-8acd-eaefa0910416}	73
+1	{ff119e8a-3362-48cc-bdf3-e6b0783733fa}	
+11	J1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{32b7c102-0a99-453b-989b-c87d6ec92457}	74
+1	{c385c30a-b1a7-4650-8af8-fff6b0cc0b57}	
+11	J1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{97c44cfd-8309-4b81-bf84-06a0a05b456c}	75
+1	{6fd859f1-dfdc-434c-9f29-a3b02ab115ea}	
+11	J1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+**MEMBERLOAD_MEMBER
+41
+UUID	No
+{19928eed-2b9f-40bd-9427-108ec315b088}	76
+2	{b43ed88c-b224-455a-90e8-7124b0612548}	{b77f27bc-43dd-4589-8e2d-9e426efb8bbc}	
+12	M1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{7a697683-618c-4804-8551-c1a6349c39c2}	77
+2	{05e7d115-f212-4603-b970-0b8601d875c5}	{f79894b2-4d4a-478c-90f4-92c90674130f}	
+12	M1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{91ea9ae6-e9c8-416b-8b7b-9194c7729fca}	78
+3	{b77f27bc-43dd-4589-8e2d-9e426efb8bbc}	{e929c332-242d-4e8e-a9ca-60be891f91ef}	{f79894b2-4d4a-478c-90f4-92c90674130f}	
+12	M2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{38c9f9eb-a5a2-414d-baad-3df13ca21828}	79
+3	{b43ed88c-b224-455a-90e8-7124b0612548}	{0a9e042f-d5ff-412b-a174-f8b5f6e26524}	{05e7d115-f212-4603-b970-0b8601d875c5}	
+12	M2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{a34590b3-d7cd-4c05-bd80-4b28267ab1ff}	80
+2	{c7b0bd6c-ca0f-44ed-aab3-dc7b0e9943cb}	{cdf1a9fe-30d8-4d5a-96fb-e83e98b6651b}	
+12	M3	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{c2110581-f9a2-4031-9503-07181db66336}	81
+3	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	{c7b0bd6c-ca0f-44ed-aab3-dc7b0e9943cb}	{894ea0c5-c934-4e28-a585-aa71b3560c1e}	
+12	M3	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{5c0c2b86-2312-429a-ae9e-2e969956f054}	82
+2	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	
+12	M3	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{75d528e0-0a0d-485f-bb44-6f19f2e3880a}	83
+2	{894ea0c5-c934-4e28-a585-aa71b3560c1e}	{3d8e7da2-6215-4355-9563-eaefa87b9922}	
+12	M3	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{0ef886a7-4c89-4254-a035-d55b4a5c1781}	84
+3	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	{cdf1a9fe-30d8-4d5a-96fb-e83e98b6651b}	{3d8e7da2-6215-4355-9563-eaefa87b9922}	
+12	M3	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{321f5319-56e8-4390-aba3-4e50d8245de1}	85
+3	{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	{42184f5f-c3b5-4c66-a692-25fb44b3a668}	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	
+12	M4	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{fd121c70-4521-4cd5-82b6-f85127886e26}	86
+3	{0117256f-4102-4dce-bf45-05c1902b4a4e}	{656a5c10-dfbc-4ad1-a0d6-21e49e73cd64}	{78d70dc6-77d7-45fa-a748-266aa64f7783}	
+12	M4	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{5c4de969-cd5e-401f-893d-c5e4dfde2e67}	87
+2	{42184f5f-c3b5-4c66-a692-25fb44b3a668}	{656a5c10-dfbc-4ad1-a0d6-21e49e73cd64}	
+12	M4	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{0597a63b-4493-42fa-85fb-649861a2826a}	88
+2	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	{78d70dc6-77d7-45fa-a748-266aa64f7783}	
+12	M4	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{0477c9cb-3fd8-43a2-9df9-224072f1b120}	89
+2	{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	{0117256f-4102-4dce-bf45-05c1902b4a4e}	
+12	M4	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{67789f0e-3bf7-4180-b046-95f67a126a3c}	90
+2	{426fa677-8d49-4ff7-be36-263ecb84875a}	{6fd859f1-dfdc-434c-9f29-a3b02ab115ea}	
+12	M5	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{98d20274-4422-48eb-802f-fe46e76ddba8}	91
+3	{ff119e8a-3362-48cc-bdf3-e6b0783733fa}	{c385c30a-b1a7-4650-8af8-fff6b0cc0b57}	{6fd859f1-dfdc-434c-9f29-a3b02ab115ea}	
+12	M5	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{949016f9-bb5a-4a67-a30f-9c50ab776934}	92
+2	{ed905499-ae29-4f95-aed0-f66daccf43ac}	{ff119e8a-3362-48cc-bdf3-e6b0783733fa}	
+12	M5	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{4cd4d746-adae-42e5-81c5-d24b357bc611}	93
+3	{ed905499-ae29-4f95-aed0-f66daccf43ac}	{dbf582de-8d1f-4f94-9425-d5b3f3636be1}	{426fa677-8d49-4ff7-be36-263ecb84875a}	
+12	M5	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{e7df412e-d9da-4f05-bb9f-3ae9314dd427}	94
+2	{dbf582de-8d1f-4f94-9425-d5b3f3636be1}	{c385c30a-b1a7-4650-8af8-fff6b0cc0b57}	
+12	M5	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{e7baae54-ed90-45a3-a5ab-4b4dcbceca86}	95
+2	{bbce0845-fd14-4261-b344-1f264d9e126e}	{19de95df-1949-4777-a6a2-afa449644807}	
+12	M6	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{b1262e56-1eb8-435c-bbc3-2ddbf028f608}	96
+2	{4f0d494f-9bde-4593-87a8-2af975c4b52b}	{2509fd16-c344-4af0-ae86-d7130df2789d}	
+12	M6	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{f7fa941d-5271-4733-9bf8-9a5f08cfc10a}	97
+3	{7abbcf9b-e41c-458a-a697-b32a6ac7bfe4}	{4f0d494f-9bde-4593-87a8-2af975c4b52b}	{bbce0845-fd14-4261-b344-1f264d9e126e}	
+12	M6	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{ba0ee64e-c393-419c-ba0b-547c74c674f5}	98
+3	{55003571-0ede-4d9a-973c-8638e771fbc9}	{2509fd16-c344-4af0-ae86-d7130df2789d}	{19de95df-1949-4777-a6a2-afa449644807}	
+12	M6	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{8075e205-96fe-4ccf-8848-a5df4e6fdef4}	99
+2	{7abbcf9b-e41c-458a-a697-b32a6ac7bfe4}	{55003571-0ede-4d9a-973c-8638e771fbc9}	
+12	M6	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{c0f746d8-82a2-4de1-a8cf-fcd8847e7dc3}	100
+2	{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	{ed905499-ae29-4f95-aed0-f66daccf43ac}	
+12	M1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{ab286bfe-40d4-458e-9f65-77b579a63328}	101
+2	{05e7d115-f212-4603-b970-0b8601d875c5}	{894ea0c5-c934-4e28-a585-aa71b3560c1e}	
+12	M1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{33a47ef7-3156-4307-bb19-429b4e06634e}	102
+2	{b43ed88c-b224-455a-90e8-7124b0612548}	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	
+12	M1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{457db26a-6e47-445b-b610-0430e109b0b6}	103
+2	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	{426fa677-8d49-4ff7-be36-263ecb84875a}	
+12	M1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{2efbba47-defc-4225-baba-f9ece5d5f1fa}	104
+2	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	
+12	M1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{0daff0a9-873f-4e87-b606-3cc9b0e03a58}	105
+2	{ed905499-ae29-4f95-aed0-f66daccf43ac}	{7abbcf9b-e41c-458a-a697-b32a6ac7bfe4}	
+12	M1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{445b6d0b-3d1c-4565-92b1-631b3eeb4b4b}	106
+2	{426fa677-8d49-4ff7-be36-263ecb84875a}	{bbce0845-fd14-4261-b344-1f264d9e126e}	
+12	M1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{b98dcb75-bf9d-4815-b26c-0d9a5b8cb1e1}	107
+2	{894ea0c5-c934-4e28-a585-aa71b3560c1e}	{230aa8f3-54bb-43eb-97ed-5c5dcbefdc7c}	
+12	M1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{76d1a76d-eb28-4b51-a925-ab80046e5563}	108
+2	{a41602c5-16b3-4ed7-b264-f3cc18989ae7}	{53e08fbd-8d10-4d35-b909-e1936cc9a15c}	
+12	M1	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{e45970c5-2b0b-4a0d-81e8-9db434833297}	109
+2	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	{0117256f-4102-4dce-bf45-05c1902b4a4e}	
+12	M2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{bc45c841-c5a3-46b5-9122-ca32d50d8372}	110
+2	{ff119e8a-3362-48cc-bdf3-e6b0783733fa}	{55003571-0ede-4d9a-973c-8638e771fbc9}	
+12	M2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{2b37b5b3-da1d-439f-b106-8aca5a4ca9f9}	111
+2	{b77f27bc-43dd-4589-8e2d-9e426efb8bbc}	{2e9aa9a3-48d9-4e3f-8d83-ac62cdfca063}	
+12	M2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{e2352f08-ea48-4c8a-8788-adfcf6dfd851}	112
+2	{0117256f-4102-4dce-bf45-05c1902b4a4e}	{ff119e8a-3362-48cc-bdf3-e6b0783733fa}	
+12	M2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{5e63107a-ee1b-4eed-9765-0bbbba96914b}	113
+2	{6fd859f1-dfdc-434c-9f29-a3b02ab115ea}	{19de95df-1949-4777-a6a2-afa449644807}	
+12	M2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{2543919d-9777-457d-b88a-c58cdab50069}	114
+2	{3d8e7da2-6215-4355-9563-eaefa87b9922}	{78d70dc6-77d7-45fa-a748-266aa64f7783}	
+12	M2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{80bd8fba-dec0-4abd-8631-83d8c0d23738}	115
+2	{78d70dc6-77d7-45fa-a748-266aa64f7783}	{6fd859f1-dfdc-434c-9f29-a3b02ab115ea}	
+12	M2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+{5f361a4a-f179-4352-8deb-aa4895d4b274}	116
+2	{f79894b2-4d4a-478c-90f4-92c90674130f}	{3d8e7da2-6215-4355-9563-eaefa87b9922}	
+12	M2	0	0	0	0	0	0	0	1	2	1200	1200	0.25	0.25					
+**SLABLOAD_MEMBER
+0
+UUID	No

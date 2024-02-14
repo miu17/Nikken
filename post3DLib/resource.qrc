@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/post3DLib/">
+        <file>translate/post3DLib_ja.qm</file>
+        <file>include_files/GeneralLineConditionList.csv</file>
+        <file>include_files/standard_steel/Ｈ形鋼(JIS).csv</file>
+        <file>include_files/standard_steel/Ｈ形鋼(ユーザー定義).csv</file>
+        <file>include_files/standard_steel/Ｈ形鋼(外法一定).csv</file>
+        <file>include_files/standard_steel/Ｈ形鋼(外法一定拡張サイズ).csv</file>
+        <file>include_files/standard_steel/Ｔ形鋼(ユーザー定義).csv</file>
+        <file>include_files/standard_steel/角形鋼管(BCP).csv</file>
+        <file>include_files/standard_steel/角形鋼管(BCR).csv</file>
+        <file>include_files/standard_steel/角形鋼管(JIS正方形).csv</file>
+        <file>include_files/standard_steel/角形鋼管(JIS長方形).csv</file>
+        <file>include_files/standard_steel/角形鋼管(SHC).csv</file>
+        <file>include_files/standard_steel/角形鋼管(SHC-EN).csv</file>
+        <file>include_files/standard_steel/角形鋼管(SHCK).csv</file>
+        <file>include_files/standard_steel/角形鋼管(ユーザー定義).csv</file>
+        <file>include_files/standard_steel/鋼管(JIS_STK).csv</file>
+        <file>include_files/standard_steel/鋼管(JIS_STKN).csv</file>
+        <file>include_files/standard_steel/鋼管(ユーザー定義).csv</file>
+    </qresource>
+</RCC>

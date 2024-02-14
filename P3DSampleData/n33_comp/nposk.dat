@@ -1,0 +1,227 @@
+*OUTGROUPP
+IFLOORS   1         2         3         4         5
+ALLFLOORS 1         2         3         4         5         R                 
+*OUTGROUPS
+IFRAMES   X1        X2        Y1        Y2
+ALLFRAMES X1        XA        X2        X3        XB        X4        
+-         Y1        Y2        S1        S2        S3        S4        S5
+-         V6        V7        V8        V9
+-         U1        UA        U2        U3        UB        U4
+-         T1        TA        T2        T3        TB        T4
+E1FRAMES  X1        XA        X2        X3        XB        X4
+-         T1        TA        T2        T2        TB        T4
+-         U1        UA        U2        U3        UB        U4
+E2FRAMES  Y1        Y2        S1        S2        S3        S4        S5
+-         V6        V7        V8        V9        
+*CCS
+CaseDL    RSTDL     1.0       RSTLL1    1.0
+CaseE1    RSTE1     1.0
+CaseE2    RSTE2     1.0
+CaseU1    RSTDL     1.0       RSTLL1    1.0       RSTU1     1.0
+CaseU2    RSTDL     1.0       RSTLL1    1.0       RSTU2     1.0
+CaseU3    RSTDL     1.0       RSTLL1    1.0       RSTU3     1.0
+CaseU4    RSTDL     1.0       RSTLL1    1.0       RSTU4     1.0
+CaseU5    RSTDL     1.0       RSTLL1    1.0       RSTU5     1.0
+CaseU6    RSTDL     1.0       RSTLL1    1.0       RSTU6     1.0
+CaseU7    RSTDL     1.0       RSTLL1    1.0       RSTU7     1.0
+CaseU8    RSTDL     1.0       RSTLL1    1.0       RSTU8     1.0
+//*PLANINPUT
+//IFLOORS
+//*SECTIONINPUT
+//IFRAMES
+//*SUMLOADP DL        AUTO      PLOUT
+//IFLOORS
+//*SUMLOADP DL        MANUAL    PLOUT
+//IFLOORS
+//*SUMLOADP DL        SELF      PLOUT
+//IFLOORS
+//*SUMLOADS DL        AUTO      PLIN
+//IFRAMES
+//*SUMLOADS DL        MANUAL    PLIN
+//IFRAMES
+//*SUMLOADS DL        SELF      PLIN
+//IFRAMES
+//*SUMLOADS DL        AUTO      AXIAL
+//IFRAMES
+//*SUMLOADS DL        MANUAL    AXIAL
+//IFRAMES
+//*SUMLOADS DL        SELF      AXIAL
+//IFRAMES
+//*PLAN
+//IFLOORS
+//*SECTION
+//IFRAMES
+//*LPLAN
+//IFLOORS
+//*LSECTION
+//IFRAMES
+//*LCMQP
+//CaseDL    ALLFLOORS
+//*LCMQS
+//CaseDL    ALLFRAMES
+//*JMASSP
+//ALLFLOORS
+//*JMASSS
+//ALLFRAMES
+//*MODELP
+//MODEL1    ALLFLOORS
+//*MODELS
+//MODEL1    ALLFRAMES
+//*LENGTHP
+//ALLFLOORS
+//*LENGTHS
+//ALLFRAMES
+//*FACELENGTHP
+//MODEL1    ALLFLOORS
+//*FACELENGTHS
+//MODEL1    ALLFRAMES
+//*COORDINATEP
+//ALLFLOORS
+//*COORDINATES
+//ALLFRAMES
+//*MPHAIP
+//MODEL1    ALLFLOORS
+//*MPHAIS
+//MODEL1    ALLFRAMES
+//*MRLP
+//MODEL1    ALLFLOORS
+//*MRLS
+//MODEL1    ALLFRAMES
+//*MCLP
+//ALLFLOORS
+//*MCLS
+//ALLFRAMES            ←APPでも失敗する
+//*MBLP
+//ALLFLOORS
+//*MBLS
+//ALLFRAMES
+//*NODEOUTERFORCEP
+//CaseDL    ALLFLOORS
+//*NODEOUTERFORCES
+//CaseDL    ALLFRAMES
+//*NODEOUTERMOMENTP
+//CaseDL    ALLFLOORS
+//*NODEOUTERMOMENTS
+//CaseDL    ALLFRAMES
+//*JSTRP
+//CaseDL    ALLFLOORS
+//*JSTRS
+//CaseDL    ALLFRAMES
+//*FSTRP
+//CaseE1    ALLFLOORS
+//CaseE2    ALLFLOORS
+//*FSTRS
+//CaseE1    E1FRAMES
+//CaseE2    E2FRAMES
+//*CREZ
+//CaseDL    CaseE1    CaseE2    ALLFLOORS     <-ケースの与え方を確認中
+//*REACT
+//CaseDL    ALLFLOORS
+//*AXIALFORCEMAP
+//CaseDL    ALLFLOORS   <-APPも3階が落ちる　TPSLABのShellのPrea取得がnullptrになっている？
+//*QMAP
+//CaseE1    ALLFLOORS   <-APPも3階が落ちる
+//CaseE2    ALLFLOORS   <-APPも3階が落ちる
+//*VERTICALLOADMAP
+//CaseDL    ALLFLOORS
+//*TORSIONMOMENTP
+//CaseDL    ALLFLOORS
+//*TORSIONMOMENTS
+//CaseDL    ALLFRAMES
+//*FLOORDEFORMATIONMAP
+//CaseE1    ALLFLOORS   <-落ちる
+//CaseE2    ALLFLOORS   
+//*FLOORRIGIDITYMAP
+//CaseE1    ALLFLOORS   <-落ちる
+//CaseE2    ALLFLOORS   
+//*DEFORMATIONP
+//CaseE1    ALLFLOORS   
+//CaseE2    ALLFLOORS   
+//*DEFORMATIONS
+//CaseE1    E1FRAMES
+//CaseE2    E2FRAMES
+//*DISPLACEMENTP
+//CaseE1    ALLFLOORS   
+//CaseE2    ALLFLOORS   
+//*DISPLACEMENTS
+//CaseE1    E1FRAMES
+//CaseE2    E2FRAMES
+//*CHP                                         
+//VL        ALLFLOORS    <-Appで1階が落ちる
+//VL+E1     ALLFLOORS
+//VL-E1     ALLFLOORS
+//VL+E2     ALLFLOORS
+//VL-E2     ALLFLOORS
+//*CHS
+//VL        ALLFRAMES      <-T1で落ちる
+//VL+E1     E1FRAMES       
+//VL-E1     E1FRAMES
+//VL+E2     E2FRAMES
+//VL-E2     E2FRAMES
+//*ALLOWABLESTRESSP
+//VL        ALLFLOORS
+//VL+E1     ALLFLOORS
+//VL-E1     ALLFLOORS
+//VL+E2     ALLFLOORS
+//VL-E2     ALLFLOORS
+//*ALLOWABLESTRESSS
+//VL        ALLFRAMES      <-T1で落ちる
+//VL+E1     E1FRAMES
+//VL-E1     E1FRAMES
+//VL+E2     E2FRAMES
+//VL-E2     E2FRAMES
+//*GCKCP
+//ALLFLOORS                <-Appで失敗する
+*QUDS
+CASE      XP
+FLOOR     ALLFLOORS
+GRID      E1FRAMES
+CASE      YP
+FLOOR     ALLFLOORS
+GRID      E2FRAMES
+CASE      XM
+FLOOR     ALLFLOORS
+GRID      E1FRAMES
+CASE      YM
+FLOOR     ALLFLOORS
+GRID      E2FRAMES
+//*MEMBERSTRENGTHP
+//*MEMBERSTRENGTHS          <-落ちる
+//*ALLOWRATIOEP
+//*ALLOWRATIOES             <-落ちる
+//*ALLOWRATIOUP
+//*ALLOWRATIOUS             <-落ちる
+//*DSCURVE
+//*DSCURVEFRAME
+//ALLFRAMES
+//*DSCURVEFLOOR             図がおかしい
+//ALLFLOORS
+//*DSQTHETACURVE
+//*DSQTHETACURVEFRAME
+//ALLFRAMES
+//*DSQTHETACURVEFLOOR
+//ALLFLOORS
+//*DSYIELDSTEPP
+//*DSYIELDSTEPS             <-落ちる
+//*DSYIELDRATIOP
+//*DSYIELDRATIOS            <-落ちる
+//*DSPLASTICRATIOP
+//*DSPLASTICRATIOS
+//*DSSTR                 <-qufileからStressの作り方がわからない T1で失敗
+//*MRNK                  <-Appで失敗する
+//*DSSH                  <-せん断余裕度図はどの図？OUTFIGTYPEがわからない
+//*DSMU                  <-AppでT1で失敗
+//*QUCURVE
+//*QUCURVEFRAME
+//ALLFRAMES
+//*QUCURVEFLOOR
+//ALLFLOORS
+//*QUYIELDSTEPP
+//*QUYIELDSTEPS             <-落ちる
+//*QUYIELDRATIOP
+//*QUYIELDRATIOS            <-落ちる
+//*QUSTR                 <-qufileからStressの作り方がわからない T1で失敗
+//*QUSH                  <-せん断余裕度図はどの図？OUTFIGTYPEがわからない
+//*DSQUCURVE
+*QUNEEDF               
+*FINALEND

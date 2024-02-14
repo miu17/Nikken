@@ -1,0 +1,673 @@
+1.0.0
+*FLOOR,3
+#No, FloorName, Height, displaysFloorScale, BeamConcrete, SlabConcrete, UUID, AdjstedLevel, isChildFloor, ParentUuid
+0,B1,-3.9,1,,,{b5140257-9de5-41ac-8bd8-6251eee607b1},0,0,{00000000-0000-0000-0000-000000000000}
+1,1,0.1,1,,,{6d1bd5d0-f294-4991-8596-8d01870e68f5},0,0,{00000000-0000-0000-0000-000000000000}
+2,PHR,4.1,1,,,{d431ebcb-27a8-46ca-aa49-2d069030e474},0,0,{00000000-0000-0000-0000-000000000000}
+**BASELEVELFLOOR,{6d1bd5d0-f294-4991-8596-8d01870e68f5}
+**ROOFTOPFLOOR,{d431ebcb-27a8-46ca-aa49-2d069030e474}
+*FRAME
+**STRAIGHT,2
+#No, FrameGroup, FrameSum, Ox, Oy, StartAngle, LengthPlus, LengthMinus, FloorFrom, FloorTo, GID
+##No, Name, UUID, Span
+0,X,3,0,0,0,50,10,{00000000-0000-0000-0000-000000000000},{00000000-0000-0000-0000-000000000000},{c4973ad3-3330-4268-ace4-38433183f36a}
+0,X1,{6b5c05c7-c185-4630-8ec5-c3305344711d},4
+1,X2,{48766b8d-90c2-4958-8d5f-b1ff3d41d42c},4
+2,X3,{8c9df81b-82b9-40f8-890b-989296d48f47},8
+1,Y,3,0,0,90,50,10,{00000000-0000-0000-0000-000000000000},{00000000-0000-0000-0000-000000000000},{877a0b39-65ad-49b3-b629-76675a7335c2}
+3,Y1,{62943ee5-88ab-442b-a041-af867ff7b82e},6
+4,Y2,{a4e25253-45d2-4db4-8c50-12046614c053},6
+5,Y3,{3b3a4e3f-cc0c-4828-b535-8e61e7b0bb66},12
+**CIRCLE,0
+#No, FrameGroup, FrameSum, Ox, Oy, StartAngle, EndAngle, Divisions, FloorFrom, FloorTo, GID
+##No, Name, UUID, Span
+**RADIUS,0
+#No, FrameGroup, FrameSum, Ox, Oy, StartAngle, LengthPlus, FloorFrom, FloorTo, GID
+##No, Name, UUID, Angle
+**DIAMETER,0
+#No, FrameGroup, FrameSum, Ox, Oy, StartAngle, LengthPlus, LengthMinus, FLoorFrom, FloorTo, GID
+##No, Name, UUID, Angle
+**VARIABLE,0
+#No, FrameGroup, FrameSum, FloorFrom, FloorTo, GID
+##No, Name, UUID, Count, (x/y)xCount
+**CLCIRCLE,0
+#No, FrameGroup, FrameSum, Ox, Oy, Divisions, FloorFrom, FloorTo, GID
+##No, Name, UUID, Span
+**CLVARIABLE,0
+#No, FrameGroup, FrameSum, FloorFrom, FloorTo, GID
+##No, Name, UUID, Count, (x/y)xCount
+*MATERIAL
+**CONCRETE,1
+#No, Label, E, G, UnitWeight1, F_Strength, T_L, T_S, T_U, C_L, C_S, C_U, S_L, S_S, S_U, A_L, A_S, A_U, UA_L, UA_S
+0,FC21,21680,9034,24,21,0,0,2.566,7,14,17.85,0.7,1.05,1.4,0,0,5.264,0,0,
+**STEEL,0
+#No, Label, E, G, UnitWeight1, UnitWeight2, ModularRatio, F_Strength, T_L, T_S, T_U, C_L, C_S, C_U, S_L, S_S, S_U
+**REINFORCE,2
+#No, Label, Symbol, RangeFrom, RangeTo, E, T_L, T_S, T_U, C_L, C_S, C_U, S_L, S_S, S_U
+1,SD345,D,19,25,205000,215,345,379.5,0,0,0,195,345,345,
+2,SD295,D,10,16,205000,196.7,295,324.5,0,0,0,195,295,295,
+*Section
+**COLUMN
+***RC,1
+#No, Name,startFloorId,endFloorId,FinishLoad,ConcreteMaterial,iDx,iDy,iMainBar1,iMainBar2,iMainBarPhi,iAxialCenterX,iAxialCenterY,iAxialDx,iAxcialDy,iAxialBar1,iAxialBar2,iAxialBarPhi,iHoopX,iHoopY,iHoopPhi,iHoopPitch,iRK,iRY,jDx,jDy,jMainBar1,jMainBar2,jMainBarPhi,jAxialCenterX,jAxialCenterY,jAxialDx,jAxcialDy,jAxialBar1,jAxialBar2,jAxialBarPhi,jHoopX,jHoopY,jHoopPhi,jHoopPitch,jRK,jRY
+0,C1,{00000000-0000-0000-0000-000000000000},{00000000-0000-0000-0000-000000000000},2000,FC21,500,500,4/4,4/4,D25,,0,0,0,0,,,,2,2,D13,100,70,80,500,500,4/4,4/4,D25,,0,0,0,0,,,,2,2,D13,100,70,80
+***S,0
+#No, Name,startFloorId,endFloorId,FinishLoad,iLength,BaseList,iSteel,iShapeListName,iStandardShapeSteel,iH,iB,iT1,iT2,iH_T,iB_T,iT1_T,iT2_T,jSteel,jShapeListName,jStandardShapeSteel,jH,jB,jT1,jT2,jH_T,jB_T,jT1_T,jT2_T
+***SRC,0
+#No, Name,startFloorId,endFloorId,FinishLoad,ConcreteMaterial,FilledConcreteMaterial,iLength,BaseList,iDx,iDy,iMainBar1,iMainBar2,iMainBarPhi,iAxialCenterX,iAxialCenterY,iAxialDx,iAxcialDy,iAxialBar1,iAxialBar2,iAxialBarPhi,iHoopX,iHoopY,iHoopPhi,iHoopPitch,iRK,iRY,iSteel,iShapeListName,iStandardShapeSteel,iH,iB,iT1,iT2,iCoordinateX,iCoordinateY,iShapeListName_T,iStandardShapeSteel_T,iH_T,iB_T,iT1_T,iT2_T,iCoordinateX_T,iCoordinateY_T,jDx,jDy,jMainBar1,jMainBar2,jMainBarPhi,jAxialCenterX,jAxialCenterY,jAxialDx,jAxcialDy,jAxialBar1,jAxialBar2,jAxialBarPhi,jHoopX,jHoopY,jHoopPhi,jHoopPitch,jRK,jRY,jSteel,jShapeListName,jStandardShapeSteel,jH,jB,jT1,jT2,jCoordinateX,jCoordinateY,jShapeListName_T,jStandardShapeSteel_T,jH_T,jB_T,jT1_T,jT2_T,jCoordinateX_T,jCoordinateY_T
+***CFT,0
+#No, Name,startFloorId,endFloorId,FinishLoad,FilledConcreteMaterial,iLength,BaseList,iSteel,iShapeListName,iStandardShapeSteel,iH,iB,iT1,iT2,jSteel,jShapeListName,jStandardShapeSteel,jH,jB,jT1,jT2
+**GIRDER
+***RC,2
+#No, Name, startFloorId, endFloorId, Cantilever,FinishLoad,ConcreteMaterial,iDx,iDy,iMainBar1,iMainBar2,iMainBarPhi1,iMainBarPhi2,iHoop,iHoopPhi,iHoopPitch,iRK,iRKu,iRKb,iRY,cDx,cDy,cMainBar1,cMainBar2,cMainBarPhi1,cMainBarPhi2,cHoop,cHoopPhi,cHoopPitch,cRK,cRKu,cRKb,cRY,jDx,jDy,jMainBar1,jMainBar2,jMainBarPhi1,jMainBarPhi2,jHoop,jHoopPhi,jHoopPitch,jRK,jRKu,jRKb,jRY
+0,FG1,{b5140257-9de5-41ac-8bd8-6251eee607b1},{b5140257-9de5-41ac-8bd8-6251eee607b1},0,0,FC21,400,800,4/2,4/2,D22,D22,2,D13,200,70,70,70,80,400,800,4/2,4/2,D22,D22,2,D13,200,70,70,70,80,400,800,4/2,4/2,D22,D22,2,D13,200,70,70,70,80
+1,G1,{6d1bd5d0-f294-4991-8596-8d01870e68f5},{d431ebcb-27a8-46ca-aa49-2d069030e474},0,0,FC21,300,600,3,3,D22,D22,2,D10,200,70,70,70,80,300,600,3,3,D22,D22,2,D10,200,70,70,70,80,300,600,3,3,D22,D22,2,D10,200,70,70,70,80
+***S,0
+#No, Name, startFloorId, endFloorId, Cantilever,FinishLoad,iLength,jLength,iStiffness,jStiffness,iSteel,iSteelWeb,iShapeListName,iStandardShapeSteel,iH,iB,iT1,iT2,cSteel,cSteelWeb,cShapeListName,cStandardShapeSteel,cH,cB,cT1,cT2,jSteel,jSteelWeb,jShapeListName,jStandardShapeSteel,jH,jB,jT1,jT2
+***SRC,0
+#No, Name, startFloorId, endFloorId, Cantilever,FinishLoad,ConcreteMaterial,iLength,jLength,iDx,iDy,iMainBar1,iMainBarPhi1,iMainBar2,iMainBarPhi2,iHoop,iHoopPhi,iHoopPitch,iRK,iRKu,iRKb,iRY,iRY1,iSteel,iSteelWeb,iShapeListName,iStandardShapeSteel,iH,iB,iT1,iT2,iCoordinateX,iCoordinateY,cDx,cDy,cMainBar1,cMainBarPhi1,cMainBar2,cMainBarPhi2,cHoop,cHoopPhi,cHoopPitch,cRK,iRKu,cRKb,cRY,cRY1,cSteel,cSteelWeb,cShapeListName,cStandardShapeSteel,cH,cB,cT1,cT2,cCoordinateX,cCoordinateY,jDx,jDy,jMainBar1,jMainBarPhi1,jMainBar2,jMainBarPhi2,jHoop,jHoopPhi,jHoopPitch,jRK,iRKu,jRKb,jRY,jRY1,jSteel,jSteelWeb,jShapeListName,jStandardShapeSteel,jH,jB,jT1,jT2,jCoordinateX,jCoordinateY
+**BRACE
+***S,0
+#No, Name, startFloorId,endFloorId,FinishLoad,hasCompResistance,iLength,jLength,direct_area,direct_effectiveArea,direct_slenderRatio,direct_unitmass,iSteel,iShapeListName,iStandardShapeSteel,iH,iB,iT1,iT2,cSteel,cShapeListName,cStandardShapeSteel,cH,cB,cT1,cT2,jSteel,jShapeListName,jStandardShapeSteel,jH,jB,jT1,jT2
+**BEAM
+***RC,1
+#No, Name, Cantilever,FinishLoad,ConcreteMaterial,iDx,iDy,iMainBar1,iMainBar2,iMainBarPhi1,iMainBarPhi2,iHoop,iHoopPhi,iHoopPitch,iRK,iRKu,iRKb,iRY,cDx,cDy,cMainBar1,cMainBar2,cMainBarPhi1,cMainBarPhi2,cHoop,cHoopPhi,cHoopPitch,cRK,cRKu,cRKb,cRY,jDx,jDy,jMainBar1,jMainBar2,jMainBarPhi1,jMainBarPhi2,jHoop,jHoopPhi,jHoopPitch,jRK,jRKu,jRKb,jRY
+0,B1,0,0,FC21,350,600,3,3,D22,D22,2,D10,200,70,70,70,80,350,600,3,3,D22,D22,2,D10,200,70,70,70,80,350,600,3,3,D22,D22,2,D10,200,70,70,70,80
+***S,0
+#No, Name, Cantilever,FinishLoad,iLength,jLength,iSteel,iSteelWeb,iShapeListName,iStandardShapeSteel,iH,iB,iT1,iT2,cSteel,cSteelWeb,cShapeListName,cStandardShapeSteel,cH,cB,cT1,cT2,jSteel,jSteelWeb,jShapeListName,jStandardShapeSteel,jH,jB,jT1,jT2
+***SRC,0
+#No, Name, Cantilever,FinishLoad,ConcreteMaterial,iLength,jLength,iDx,iDy,iMainBar1,iMainBar2,iMainBarPhi1,iMainBarPhi2,iHoop,iHoopPhi,iHoopPitch,iRK,iRKu,iRKb,iRY,iRY1,iSteel,iSteelWeb,iShapeListName,iStandardShapeSteel,iH,iB,iT1,iT2,iCoordinateX,iCoordinateY,cDx,cDy,cMainBar1,cMainBar2,cMainBarPhi1,cMainBarPhi2,cHoop,cHoopPhi,cHoopPitch,cRK,iRKu,cRKb,cRY,cRY1,cSteel,cSteelWeb,cShapeListName,cStandardShapeSteel,cH,cB,cT1,cT2,cCoordinateX,cCoordinateY,jDx,jDy,jMainBar1,jMainBar2,jMainBarPhi1,jMainBarPhi2,jHoop,jHoopPhi,jHoopPitch,jRK,iRKu,jRKb,jRY,jRY1,jSteel,jSteelWeb,jShapeListName,jStandardShapeSteel,jH,jB,jT1,jT2,jCoordinateX,jCoordinateY
+**SLAB,2
+No,Label,SlabType,ConcreteMaterial,ConcreteThickness,Steel,SteelThickness,FinishLoad,LoadDirection,sUPPEREDGE_A_BARPHI,sUPPEREDGE_A_BARPITCH,sLOWEREDGE_A_BARPHI,sLOWEREDGE_A_BARPITCH,sUPPERCENTER_A_BARPHI,sUPPERCENTER_A_BARPITCH,sLOWERCENTER_A_BARPHI,sLOWERCENTER_A_BARPITCH,sUPPER_B_BARPHI,sUPPER_B_BARPITCH,sLOWER_B_BARPHI,sLOWER_B_BARPITCH,lUPPEREDGE_A_BARPHI,lUPPEREDGE_A_BARPITCH,lLOWEREDGE_A_BARPHI,lLOWEREDGE_A_BARPITCH,lUPPERCENTER_A_BARPHI,lUPPERCENTER_A_BARPITCH,lLOWERCENTER_A_BARPHI,lLOWERCENTER_A_BARPITCH,lUPPER_B_BARPHI,lUPPER_B_BARPITCH,lLOWER_B_BARPHI,lLOWER_B_BARPITCH
+0,S15,îÒç\ë¢,FC21,150,,0,0,-1,,200,,200,,200,,200,,200,,200,,200,,200,,200,,200,,200,,200
+1,FS1,îÒç\ë¢,FC21,180,,0,0,-1,,200,,200,,200,,200,,200,,200,,200,,200,,200,,200,,200,,200
+**WALL
+***NormalWall,1
+#NO,LABEL,FLOORFROM,FLOORTO,WALLTYPE,CONC,CONCTHICKNESS,STEEL,STEELTHICKNESS,FINISHLOAD,BARARRANGEMENTTYPE,vBARPHI,vBARPITCH,hBARPHI,hBARPITCH,vSMALLOPENINGBARNUM,vSMALLOPENINGBARPHI,hSMALLOPENINGBARNUM,hSMALLOPENINGBARPHI,dSMALLOPENINGBARNUM,dSMALLOPENINGBARPHI,vLARGEOPENINGBARNUM,vLARGEOPENINGBARPHI,hLARGEOPENINGBARNUM,hLARGEOPENINGBARPHI,dLARGEOPENINGBARNUM,dLARGEOPENINGBARPHI
+0,W1,{00000000-0000-0000-0000-000000000000},{00000000-0000-0000-0000-000000000000},ëœóÕï«,FC21,180,,0,1000,1,D13,200,D13,200,0,,0,,0,,0,,0,,0,
+**SWALL
+***SteelWall,0
+#NO,LABEL,FLOORFROM,FLOORTO,WALLTYPE,STEEL,STEELTHICKNESS,FINISHLOAD,vRIBPITCH,vRIBTYPE,vRIBTHICKNESS,vRIBBREADTH,hRIBPITCH,hRIBTYPE,hRIBTHICKNESS,hRIBBREADTH
+***FoundationWall,0
+#NO,LABEL,CONC,CONCTHICKNESS,STEEL,STEELTHICKNESS,FINISHLOAD,vOUTERTOP_BARPHI,vOUTERTOP_BARPITCH,vOUTERMIDDLE_BARPHI,vOUTERMIDDLE_BARPITCH,vOUTERBOTTOM_BARPHI,vOUTERBOTTOM_BARPITCH,hOUTEREDGE_BARPHI,hOUTEREDGE_BARPITCH,hOUTERCENTER_BARPHI,hOUTERCENTER_BARPITCH,vINNERTOP_BARPHI,vINNERTOP_BARPITCH,vINNERMIDDLE_BARPHI,vINNERMIDDLE_BARPITCH,vINNERBOTTOM_BARPHI,vINNERBOTTOM_BARPITCH,hINNEREDGE_BARPHI,hINNEREDGE_BARPITCH,hINNERCENTER_BARPHI,hINNERCENTER_BARPITCH
+**BASEPLATE
+***S,0
+#NO,LABEL,STANDARDTYPE,PRODUCTNAME,B,D,T,BASEPLATEMATERIAL,EDGEDISTANCEY1,EDGEDISTANCEZ1,BOLTNY1,BOLTNZ1,BOLTPHI,BOLTMATERIAL,BOLTLENGTH
+***SRC,0
+#NO,LABEL,B0,D0,CONC,BASEPLATETYPE,B,D,T,SML,EDGEDISTANCEY1,EDGEDISTANCEY2,EDGEDISTANCEZ1,EDGEDISTANCEZ2,BOLTARRANGEMENTTYPE,BOLTNY1,BOLTNY2,BOLTNZ1,BOLTNZ2,BOLTPHI,BOLTMATERIAL
+**WALLOPEN,0
+NO,LABEL,OPENINGTYPE,LRBASE,LR,UDBASE,UD,POSITIONX,POSITIONY,WIDTH,HEIGHT,SLITL,SLITR,SLITB,SLITT
+**DAMPER,0
+NO,LABEL,PRODUCTTYPE,SELFWEIGHT,VECTOR_X,VECTOR_Y,VECTOR_Z,V1,V2,V3,V4,V5,V6,V7,NATURALPERIOD,DISPLACEMENT,MODEL_FLAG, RIGID_LENGTH,DAMPER_DIRECTION,TANALYSIS,FACTOR,FRAME_RIGIDITY
+**ISOLATOR,0
+NO,LABEL,PRODUCTTYPE,PRODUCTNAME,SHEARHYSTERESIS,hK1,hK2,hK3,hFY1,hFY2,AXIALHYSTERESIS,vK1,vK2,vK3,vFY1_PLUS,vFY2_PLUS,SELFWEIGHT,RENDERSHAPE,RENDERSIZED,RENDERSIZEH,SETLEVEL,DIPLACEMENT,SPRING,INFLECTION
+**JOINTLOAD,0
+NO,NAME,TYPE,FX,FY,FZ,MX,MY,MZ,COMMENT
+**MEMBERLOAD,0
+NO,NAME,TYPE,COORDINATE,DIRECTION,WA,WB,COMMENT
+**SLABLOAD,2
+NO,NAME,DL,LL0,LL1,LL2,LL3,LL4,LLE,COMMENT
+0,SL2,1000,2900,1800,0,0,0,1300,
+1,SL1,1000,1800,1300,0,0,0,600,
+**JOINT,39
+UUID,No,x,y,z,isAnalysisNode
+{05a8f4fa-1b42-4925-91cf-3f200010bb1c},1,0,4,-3.9,1
+*FLOOR,B1
+*FRAME,X2,Y1
+{ebcb335e-9a3a-4fa4-a5c1-aa8eac057b63},2,0,4,0.1,1
+*FLOOR,1
+*FRAME,X2,Y1
+{b72c98f2-95f0-4016-a716-d7d0f8a24144},3,6,4,-3.9,1
+*FLOOR,B1
+*FRAME,X2,Y2
+{2b53c62a-8733-4c2c-8d3e-5970fc3fba9d},4,6,4,0.1,1
+*FLOOR,1
+*FRAME,X2,Y2
+{703307df-ae41-48ae-bdb3-0f7c106bcc4f},5,12,4,-3.9,1
+*FLOOR,B1
+*FRAME,X2,Y3
+{e29fd14a-5743-4ef6-9466-73056021aa37},6,12,4,0.1,1
+*FLOOR,1
+*FRAME,X2,Y3
+{d6e40c25-5c68-49f1-b3f3-8865b604e791},7,4.89859e-16,8,-3.9,1
+*FLOOR,B1
+*FRAME,Y1,X3
+{e865d39e-4b40-43d1-a28b-f7af0e27afed},8,4.89859e-16,8,0.1,1
+*FLOOR,1
+*FRAME,Y1,X3
+{c464dfa1-98b0-4f77-8562-c3bbe788bd86},9,0,0,-3.9,1
+*FLOOR,B1
+*FRAME,Y1,X1
+{25811016-72d7-4571-897d-c65fa55f7643},10,0,0,0.1,1
+*FLOOR,1
+*FRAME,Y1,X1
+{6459441b-568c-4340-9fe3-7b2587c43cf2},11,6,8,-3.9,1
+*FLOOR,B1
+*FRAME,Y2,X3
+{e3cbce2f-83b4-4831-b019-b240fc8a00ba},12,6,8,0.1,1
+*FLOOR,1
+*FRAME,Y2,X3
+{312b4a7b-6c96-4e6b-aa9b-71f96dd4d1ee},13,6,0,-3.9,1
+*FLOOR,B1
+*FRAME,Y2,X1
+{43edc9d2-ec71-4d6b-84e7-231ca080b37b},14,6,0,0.1,1
+*FLOOR,1
+*FRAME,Y2,X1
+{8bb0e6f5-ce14-49da-9d94-6da94504e18e},15,12,8,-3.9,1
+*FLOOR,B1
+*FRAME,Y3,X3
+{cac2a1c6-5bef-49e5-b96e-4527cd8fc1f0},16,12,8,0.1,1
+*FLOOR,1
+*FRAME,Y3,X3
+{2e0edf19-10a5-456c-9063-ae0da864cdd1},17,12,0,-3.9,1
+*FLOOR,B1
+*FRAME,Y3,X1
+{094507dd-f2a5-4393-82bc-a186713a6727},18,12,0,0.1,1
+*FLOOR,1
+*FRAME,Y3,X1
+{39959c32-934c-4d01-a942-f9da5f8ea835},19,0,4,4.1,1
+*FLOOR,PHR
+*FRAME,X2,Y1
+{922fcdf3-4dc9-46c2-9478-d11163f350e2},20,6,4,4.1,1
+*FLOOR,PHR
+*FRAME,X2,Y2
+{cbef5ec9-c629-4896-a13d-c131d6c0271b},21,12,4,4.1,1
+*FLOOR,PHR
+*FRAME,X2,Y3
+{9ea379f6-578c-4db6-9d7c-b9240b016f9a},22,4.89859e-16,8,4.1,1
+*FLOOR,PHR
+*FRAME,Y1,X3
+{68697767-8ad9-4b35-ab61-3d3d41993659},23,0,0,4.1,1
+*FLOOR,PHR
+*FRAME,Y1,X1
+{df822afe-95fc-4a2c-8e01-9609903dc9ee},24,6,8,4.1,1
+*FLOOR,PHR
+*FRAME,Y2,X3
+{4bbb9867-ae0b-41e0-b605-639dab02428e},25,6,0,4.1,1
+*FLOOR,PHR
+*FRAME,Y2,X1
+{3ac06953-8e3a-4ba0-8528-6a562d1fdc80},26,12,8,4.1,1
+*FLOOR,PHR
+*FRAME,Y3,X3
+{1a094e5b-6acb-45eb-9a37-1b34a89cf5a2},27,12,0,4.1,1
+*FLOOR,PHR
+*FRAME,Y3,X1
+{b545f6d8-4e66-42cb-8854-f63e3ef28f07},28,3,4,0.1,0
+*FLOOR,1
+*FRAME,X2
+{dc4f32b2-41b8-4cdf-9bf6-d066270cebaa},29,3,8,0.1,0
+*FLOOR,1
+*FRAME,X3
+{30f8057f-6131-483b-8d16-52e791136ac9},30,9,4,0.1,0
+*FLOOR,1
+*FRAME,X2
+{f2684639-974d-477e-aade-24d7f92df8cb},31,9,8,0.1,0
+*FLOOR,1
+*FRAME,X3
+{f9a8730d-9bf9-426d-ac24-d7e7efd7287c},32,3,0,0.1,0
+*FLOOR,1
+*FRAME,X1
+{9d821bba-ed86-4bd7-803d-8d25741fe83c},33,9,0,0.1,0
+*FLOOR,1
+*FRAME,X1
+{451cbb87-71f5-476d-a3b2-00b55882a001},34,3,0,4.1,0
+*FLOOR,PHR
+*FRAME,X1
+{3f5be936-0e37-4b1f-8ce4-f7526fdbf4df},35,3,4,4.1,0
+*FLOOR,PHR
+*FRAME,X2
+{ce2c5450-a938-414b-859c-34166a3bc4da},36,3,8,4.1,0
+*FLOOR,PHR
+*FRAME,X3
+{5ea11d98-29d8-4fdd-8b88-a8f42eda4299},37,9,4,4.1,0
+*FLOOR,PHR
+*FRAME,X2
+{04febaec-ba4a-4479-b444-d7fda3a75693},38,9,8,4.1,0
+*FLOOR,PHR
+*FRAME,X3
+{14d14c31-212c-44f3-ac1a-b801100c4267},39,9,0,4.1,0
+*FLOOR,PHR
+*FRAME,X1
+**MEMBER
+**COLUMN_MEMBER,18
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{e4c9d5a8-36bb-421c-837e-dc7f8280f221},1
+*JOINTS,2,x(No, ratio, isBreakPoint)
+1,0,0,2,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{a9d552ee-71fc-44ea-8348-c2c8f1ee97d2},2
+*JOINTS,2,x(No, ratio, isBreakPoint)
+3,0,0,4,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{80a93958-00ea-4ab3-a388-de16bf7f6b48},3
+*JOINTS,2,x(No, ratio, isBreakPoint)
+5,0,0,6,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{4ddc4e60-f06f-43b4-ab80-2124b1eec4ab},4
+*JOINTS,2,x(No, ratio, isBreakPoint)
+7,0,0,8,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{94f8093c-dfc3-4634-899a-d99cc9c52900},5
+*JOINTS,2,x(No, ratio, isBreakPoint)
+9,0,0,10,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{d2d5aa7e-af99-464a-ae32-25071e425434},6
+*JOINTS,2,x(No, ratio, isBreakPoint)
+11,0,0,12,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{e1921dd6-df15-4277-af9c-4f2b57f6f986},7
+*JOINTS,2,x(No, ratio, isBreakPoint)
+13,0,0,14,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{4e61f53c-f793-4f09-9b33-109e25af6b4d},8
+*JOINTS,2,x(No, ratio, isBreakPoint)
+15,0,0,16,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{b1a25a2f-4a8b-4ded-94d4-b27cf99ecf4d},9
+*JOINTS,2,x(No, ratio, isBreakPoint)
+17,0,0,18,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{29352271-26bd-4892-9c60-93e67410821d},10
+*JOINTS,2,x(No, ratio, isBreakPoint)
+2,0,0,19,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{859d9201-05da-4575-826c-7aa4b7559dcb},11
+*JOINTS,2,x(No, ratio, isBreakPoint)
+4,0,0,20,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{c3fbf35e-f437-4577-8db3-e5fa044513d6},12
+*JOINTS,2,x(No, ratio, isBreakPoint)
+6,0,0,21,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{7cad9890-6090-4dc7-bfee-dc81885ae3e3},13
+*JOINTS,2,x(No, ratio, isBreakPoint)
+8,0,0,22,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{2657a6e6-0243-4d21-9dae-d87dd392b0f5},14
+*JOINTS,2,x(No, ratio, isBreakPoint)
+10,0,0,23,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{afbfec6f-aff1-492d-939a-191b23161d6e},15
+*JOINTS,2,x(No, ratio, isBreakPoint)
+12,0,0,24,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{ced2d958-bc35-4ffb-b64c-318050615be4},16
+*JOINTS,2,x(No, ratio, isBreakPoint)
+14,0,0,25,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{991e12a4-9e2e-4ebf-8367-fe4b142dab5a},17
+*JOINTS,2,x(No, ratio, isBreakPoint)
+16,0,0,26,1,0,
+*LIST,0,C1,0,0,0,0,0,0,0,1,2,1200,1200,0.5,0.5,
+*UUID-No.,{458334ae-7726-4b93-97c6-0eeb4b959800},18
+*JOINTS,2,x(No, ratio, isBreakPoint)
+18,0,0,27,1,0,
+**GIRDER_MEMBER,36
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{cfc99697-db84-4abe-8776-b40d6a9953fe},19
+*JOINTS,2,x(No, ratio, isBreakPoint)
+9,0,0,1,1,0,
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{c4d0b4a7-fec3-4bef-b1e4-3a3b71a1c024},20
+*JOINTS,2,x(No, ratio, isBreakPoint)
+1,0,0,7,1,0,
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{dbb04098-6eae-4d2c-bcdc-1dd5413fb8ca},21
+*JOINTS,2,x(No, ratio, isBreakPoint)
+13,0,0,3,1,0,
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{b5b88b97-0cd9-4c23-ae8a-163709469138},22
+*JOINTS,2,x(No, ratio, isBreakPoint)
+3,0,0,11,1,0,
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{bd6dd2d5-abff-4f64-8893-0e861981faa8},23
+*JOINTS,2,x(No, ratio, isBreakPoint)
+17,0,0,5,1,0,
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{feee6e08-5fa5-42b6-96d7-e6766a950fba},24
+*JOINTS,2,x(No, ratio, isBreakPoint)
+5,0,0,15,1,0,
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{c31c02d6-6423-4fb9-9538-04fcb6f7fa0c},25
+*JOINTS,2,x(No, ratio, isBreakPoint)
+1,0,0,3,1,0,
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{9607c100-6b5b-41dc-899d-2335202ad220},26
+*JOINTS,2,x(No, ratio, isBreakPoint)
+3,0,0,5,1,0,
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{145e86f0-b449-4617-9259-76628f7de20f},27
+*JOINTS,2,x(No, ratio, isBreakPoint)
+7,0,0,11,1,0,
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{5b22231d-54a4-484f-b2b6-fd9a74c3b0a2},28
+*JOINTS,2,x(No, ratio, isBreakPoint)
+11,0,0,15,1,0,
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{901be387-545c-4f9b-8101-03f0140d83b7},29
+*JOINTS,2,x(No, ratio, isBreakPoint)
+9,0,0,13,1,0,
+*LIST,1,FG1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{d4bafad6-7364-4b9c-ab95-4be93b3e22c9},30
+*JOINTS,2,x(No, ratio, isBreakPoint)
+13,0,0,17,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{c4b5eba0-32e8-4cb2-9a28-8ce5b2e20f69},31
+*JOINTS,2,x(No, ratio, isBreakPoint)
+10,0,0,2,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{74791ece-abfc-4d36-a98e-1f1d32590150},32
+*JOINTS,2,x(No, ratio, isBreakPoint)
+2,0,0,8,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{4e7a3f55-4c45-4bbf-b7c0-d3a177c15587},33
+*JOINTS,2,x(No, ratio, isBreakPoint)
+14,0,0,4,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{3cde7970-2aa4-43e0-8e44-fc22ebfba13f},34
+*JOINTS,2,x(No, ratio, isBreakPoint)
+4,0,0,12,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{ee050e8b-44fc-48ea-a847-0492beafdf35},35
+*JOINTS,2,x(No, ratio, isBreakPoint)
+18,0,0,6,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{9dda69cd-f62f-4470-963c-3226e93881eb},36
+*JOINTS,2,x(No, ratio, isBreakPoint)
+6,0,0,16,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{695bd723-ffd7-40b9-92e2-f6fc252576da},37
+*JOINTS,2,x(No, ratio, isBreakPoint)
+2,0,0,4,0.5,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{298e7929-5c8a-43ce-8c73-b93ba27cc499},38
+*JOINTS,2,x(No, ratio, isBreakPoint)
+4,0,0,6,0.5,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{6cdc90ef-346f-4895-975a-3057e86957b7},39
+*JOINTS,2,x(No, ratio, isBreakPoint)
+8,0,0,12,0.5,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{ca67e568-b7e4-4ed3-b423-44bbc582559b},40
+*JOINTS,2,x(No, ratio, isBreakPoint)
+12,0,0,16,0.5,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{76f76bf0-0e4c-4c3d-8cb0-bc39ff712ba5},41
+*JOINTS,2,x(No, ratio, isBreakPoint)
+10,0,0,14,0.5,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{1209a43d-34e5-42c0-aaaf-166f61d4700c},42
+*JOINTS,2,x(No, ratio, isBreakPoint)
+14,0,0,18,0.5,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{d563448c-a00a-4efc-9636-1add7738d2d4},43
+*JOINTS,2,x(No, ratio, isBreakPoint)
+23,0,0,19,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{99161721-6664-43b3-a133-8f6640386a55},44
+*JOINTS,2,x(No, ratio, isBreakPoint)
+19,0,0,22,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{ba928f70-01cf-4c94-9f6b-65129553b919},45
+*JOINTS,2,x(No, ratio, isBreakPoint)
+25,0,0,20,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{303959af-df9d-476d-8d4d-97d98a9a10cb},46
+*JOINTS,2,x(No, ratio, isBreakPoint)
+20,0,0,24,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{a7aa1685-0768-4ff7-89c7-1f65662429ef},47
+*JOINTS,2,x(No, ratio, isBreakPoint)
+27,0,0,21,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{32603b1d-7df4-4627-a5ce-f3ef25636649},48
+*JOINTS,2,x(No, ratio, isBreakPoint)
+21,0,0,26,1,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{c5e9d2a1-b2ed-4708-97c5-df0f04eae7cc},49
+*JOINTS,2,x(No, ratio, isBreakPoint)
+19,0,0,20,0.5,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{63ee589d-e5a3-471c-ac2e-a45a72463274},50
+*JOINTS,2,x(No, ratio, isBreakPoint)
+20,0,0,21,0.5,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{c6e0cbe4-c261-4bb0-848d-76c2c37f0e78},51
+*JOINTS,2,x(No, ratio, isBreakPoint)
+22,0,0,24,0.5,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{05798958-cab2-4c4b-9288-f0de5b8c231e},52
+*JOINTS,2,x(No, ratio, isBreakPoint)
+24,0,0,26,0.5,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{edb93d66-c08c-4035-a0d9-c4e331356a75},53
+*JOINTS,2,x(No, ratio, isBreakPoint)
+23,0,0,25,0.5,0,
+*LIST,1,G1,0,0,0,0,0,250,250,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{6d645dc8-8912-44df-bf51-6630ccf06f53},54
+*JOINTS,2,x(No, ratio, isBreakPoint)
+25,0,0,27,0.5,0,
+**BRACE_MEMBER,0
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+**BEAM_MEMBER,8
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+*LIST,3,B1,0,0,0,0,0,150,150,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{503287e5-b809-40ba-981a-59351fbc950c},55
+*JOINTS,0,x(No, ratio, isBreakPoint)
+
+*LIST,3,B1,0,0,0,0,0,150,150,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{d8a1d62f-ff8f-4b67-8490-6cdff8f0cc25},56
+*JOINTS,0,x(No, ratio, isBreakPoint)
+
+*LIST,3,B1,0,0,0,0,0,150,150,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{27ed99b9-7e29-464e-8e8b-c48832f1b496},57
+*JOINTS,0,x(No, ratio, isBreakPoint)
+
+*LIST,3,B1,0,0,0,0,0,150,150,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{b196577e-3be8-4c6f-beba-b017a8bbe5fc},58
+*JOINTS,0,x(No, ratio, isBreakPoint)
+
+*LIST,3,B1,0,0,0,0,0,150,150,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{7fe143f2-b621-4830-ad9c-2a6db5607479},59
+*JOINTS,0,x(No, ratio, isBreakPoint)
+
+*LIST,3,B1,0,0,0,0,0,150,150,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{b66125a4-6594-4925-bf90-837f635d109b},60
+*JOINTS,0,x(No, ratio, isBreakPoint)
+
+*LIST,3,B1,0,0,0,0,0,150,150,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{10440138-e229-46a9-90fa-983b8312ddc1},61
+*JOINTS,0,x(No, ratio, isBreakPoint)
+
+*LIST,3,B1,0,0,0,0,0,150,150,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{d1e3dcbf-73a4-4df8-9d65-bed4c9b4aaf4},62
+*JOINTS,0,x(No, ratio, isBreakPoint)
+
+**SLAB_MEMBER,20
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+*LIST,4,FS1,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{bc15e88f-60fa-4697-b912-6603f4c51507},63
+*JOINTS,4,x(No, ratio, isBreakPoint)
+7,0,0,11,0.375,1,3,0.625,1,1,1,0,
+*LIST,4,FS1,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{5a741073-2c4b-41d3-aec5-7677af5328d4},64
+*JOINTS,4,x(No, ratio, isBreakPoint)
+3,0,0,13,0.285714,1,9,0.714286,1,1,1,0,
+*LIST,4,FS1,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{4f830f7c-68de-45d7-a00f-78b374450c22},65
+*JOINTS,4,x(No, ratio, isBreakPoint)
+15,0,0,5,0.285714,1,3,0.714286,1,11,1,0,
+*LIST,4,FS1,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{a85c4284-a545-4f1a-b661-ded4829ebdad},66
+*JOINTS,4,x(No, ratio, isBreakPoint)
+5,0,0,17,0.285714,1,13,0.714286,1,3,1,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{c14dbdca-8a3b-4bba-b829-43350310ae00},67
+*JOINTS,2,x(No, ratio, isBreakPoint)
+2,0,0,10,0.3,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{a8cbe1d0-001c-4185-832e-9d7b45a9803d},68
+*JOINTS,2,x(No, ratio, isBreakPoint)
+8,0,0,2,0.3,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{2948c12d-bcb4-4529-b599-091af7624605},69
+*JOINTS,2,x(No, ratio, isBreakPoint)
+4,0,0,14,0.3,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{df3401d5-a1af-4745-939c-0762dfc9924e},70
+*JOINTS,2,x(No, ratio, isBreakPoint)
+12,0,0,4,0.3,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{2ed3d3d2-e913-4be8-99ab-77ea67b58b07},71
+*JOINTS,2,x(No, ratio, isBreakPoint)
+12,0,0,4,0.3,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{c29cd061-e800-4d4b-8b2d-ef298c00b234},72
+*JOINTS,2,x(No, ratio, isBreakPoint)
+14,0,0,4,0.363636,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{998e24ea-49be-4997-948d-1ec0ff56a328},73
+*JOINTS,2,x(No, ratio, isBreakPoint)
+16,0,0,6,0.363636,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{d020bede-7771-4381-bd2c-1ac1b0da9fe3},74
+*JOINTS,2,x(No, ratio, isBreakPoint)
+6,0,0,18,0.363636,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{8dc2c760-4379-480b-9606-a459d3bf8d5a},75
+*JOINTS,2,x(No, ratio, isBreakPoint)
+19,0,0,23,0.3,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{f2e3588b-9051-46f2-afb4-804343e249a9},76
+*JOINTS,2,x(No, ratio, isBreakPoint)
+22,0,0,19,0.3,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{90ad9cd0-8b55-4cf0-80cc-3e113505aac6},77
+*JOINTS,2,x(No, ratio, isBreakPoint)
+20,0,0,25,0.3,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{8f573aaa-bbd5-4dee-a9ee-23ee5e4e649e},78
+*JOINTS,2,x(No, ratio, isBreakPoint)
+24,0,0,20,0.363636,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{8cc356e1-8ba7-4c46-b8e6-245cef00db52},79
+*JOINTS,2,x(No, ratio, isBreakPoint)
+20,0,0,24,0.363636,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{8a425369-92a0-4dd9-806c-32897e1138a3},80
+*JOINTS,2,x(No, ratio, isBreakPoint)
+20,0,0,25,0.3,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{70d08457-2248-4852-a205-10a0d20d265d},81
+*JOINTS,2,x(No, ratio, isBreakPoint)
+26,0,0,21,0.363636,0,
+*LIST,4,S15,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{89451757-3c05-481d-91cb-a38ab04e8ff1},82
+*JOINTS,2,x(No, ratio, isBreakPoint)
+21,0,0,27,0.3,0,
+**WALL_MEMBER,2
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+*LIST,5,W1,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{f729b979-bfdc-49c4-b179-630e69fc7444},83
+*JOINTS,4,x(No, ratio, isBreakPoint)
+25,0,0,14,0.176471,1,10,0.411765,1,23,0.588235,0,
+*LIST,5,W1,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{ea10d728-d4bc-4560-8b95-8321a954490b},84
+*JOINTS,4,x(No, ratio, isBreakPoint)
+10,0,0,14,0.1875,1,13,0.375,1,9,0.625,0,
+**SWALL_MEMBER,0
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+**ZWALL_MEMBER,0
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+**DAMPER_MEMBER,0
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+**ISOLATOR_MEMBER,0
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+**JOINT_LOAD,0
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+**MEMBER_LOAD,0
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+**SLAB_LOAD,20
+DataType,SectionName,CodeAngle,OffsetY,OffsetZ,iFaceRule,jFaceRule,iFace,jFace,PartingLength,PartingRule,iLength,jLength,iRatio,jRatio,WallOpenName
+*LIST,14,SL1,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{30210732-ece9-4f2b-8bbe-e544b3d98de6},85
+*JOINTS,4,x(No, ratio, isBreakPoint)
+5,0,0,17,0.285714,1,13,0.714286,1,3,1,0,
+*LIST,14,SL1,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{c8fa5588-f5cb-4004-81c6-75f17989133d},86
+*JOINTS,4,x(No, ratio, isBreakPoint)
+7,0,0,11,0.375,1,3,0.625,1,1,1,0,
+*LIST,14,SL1,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{7e69f997-b0d6-4c9c-b268-bc8af8526c90},87
+*JOINTS,4,x(No, ratio, isBreakPoint)
+15,0,0,5,0.285714,1,3,0.714286,1,11,1,0,
+*LIST,14,SL1,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{eb07bb9e-7831-4a93-bd79-0df1d02c8f86},88
+*JOINTS,4,x(No, ratio, isBreakPoint)
+3,0,0,13,0.285714,1,9,0.714286,1,1,1,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{71b23a33-f346-439d-9e7a-28ba1c9087cc},89
+*JOINTS,2,x(No, ratio, isBreakPoint)
+16,0,0,6,0.363636,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{af37eea9-8c5a-42af-86e7-2e2e017fdd1a},90
+*JOINTS,2,x(No, ratio, isBreakPoint)
+12,0,0,4,0.3,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{abac5985-e0ea-46f8-a7ea-db9e192f39da},91
+*JOINTS,2,x(No, ratio, isBreakPoint)
+12,0,0,4,0.3,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{fb9e0b09-a9cf-4bba-a45e-30bd41fe029a},92
+*JOINTS,2,x(No, ratio, isBreakPoint)
+4,0,0,14,0.3,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{92290903-96f0-4b1e-8953-6e42c04e5452},93
+*JOINTS,2,x(No, ratio, isBreakPoint)
+2,0,0,10,0.3,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{2ad87558-1b11-4800-b72d-aa9820b52fc3},94
+*JOINTS,2,x(No, ratio, isBreakPoint)
+8,0,0,2,0.3,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{c0b02bee-7c6f-429b-adb1-cdbec1e13412},95
+*JOINTS,2,x(No, ratio, isBreakPoint)
+14,0,0,4,0.363636,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{9bb9a79f-0893-4c19-adbf-dd078ca97fa3},96
+*JOINTS,2,x(No, ratio, isBreakPoint)
+6,0,0,18,0.363636,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{448fc2d0-e1c5-4190-8fa4-3918fc5f4830},97
+*JOINTS,2,x(No, ratio, isBreakPoint)
+24,0,0,20,0.363636,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{775eb9d8-7ee2-4332-99fd-01b34bacc526},98
+*JOINTS,2,x(No, ratio, isBreakPoint)
+19,0,0,23,0.3,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{d994026c-199a-4b77-97f2-618c55716de3},99
+*JOINTS,2,x(No, ratio, isBreakPoint)
+20,0,0,25,0.3,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{ee74f1e6-f7b4-48b7-8623-a62b0f609bbd},100
+*JOINTS,2,x(No, ratio, isBreakPoint)
+26,0,0,21,0.363636,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{f464b42a-9273-403a-badf-5143533fbc1f},101
+*JOINTS,2,x(No, ratio, isBreakPoint)
+20,0,0,24,0.363636,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{0387fb92-78fa-417c-adb3-a32387484dc5},102
+*JOINTS,2,x(No, ratio, isBreakPoint)
+20,0,0,25,0.3,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{7b47a6fa-7fe5-45dc-93c2-0684348b6dea},103
+*JOINTS,2,x(No, ratio, isBreakPoint)
+21,0,0,27,0.3,0,
+*LIST,14,SL2,0,0,0,0,0,0,0,1,2,1200,1200,0.25,0.25,
+*UUID-No.,{1801d059-c0f8-4001-a7aa-fd96e614903a},104
+*JOINTS,2,x(No, ratio, isBreakPoint)
+22,0,0,19,0.3,0,

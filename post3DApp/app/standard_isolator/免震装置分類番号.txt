@@ -1,0 +1,79 @@
+﻿メーカー名：オイレス　など
+せん断弾性率etc...カタログから引っ張ってくる？メーカーごとに式から求める？入力に一致するものが無かったら？
+
+初期剛性、二次剛性など・・・グラフ上？計算値上？表に直接表示？
+二次形状係数など？？限界ひずみ、限界圧縮など？
+
+新しい部材を入力したくなるかも
+新しい入力項目を増やしたくなるかも
+メーカーや、新部材にスムーズに対応したい
+
+リストからメーカー名、ゴム厚が一致するものを検索→一致するものが一つになったら値を代入。全部入れても残った時は型番から選ぶ
+型番を入力した場合、メーカー名、ゴム厚その他を自動で全部。
+
+
+種類を選択→
+テーブル（csvファイル）が選択される。メーカー名、ゴム厚などが全部表示
+いずれかのパラメータを選択→一致するものに絞られる
+型番が選択されたor型番の候補数が１のとき、K1その他が入力される
+
+
+そもそも、普通にはファイル名一覧（保持）、ラベル名一覧（保持）、製品名一覧、製品名に対応する行が検索出来るのみ。
+
+一般的な関数名
+class SectionDoubleList : public DoubleList
+SectionDoubleList(filename); allitems,labels,
+
+QList<T> fetchColumn(col);//指定した列のデータを取得
+
+QList<int> select(int col,QString key);//指定した列からkeyに対応する行をreturn
+QList<int> find(T key);//指定したデータ列からkeyに対応する行をreturn
+static QList<int> find(QList<T>,T key);//指定したデータ列からkeyに対応する行をreturn
+ 
+static QList<T> intersection(QList<T>,QList<T>);//Listの積（両方に共通するものを抽出）
+QList<QVariant> fetchSelectedColumnData(col,QList<int>);//指定した列からlistで指定した行のデータをreturn
+static QList<T> union(QList<T>,"")//Listの和（重複したものを削除）
+
+int targetcol;
+QList<int> filteredrow;
+for(i=0;key.count();++i){
+ tmp=doublelist.select(i,key[i]);
+ filterdrow=tmp*filterdrow;
+}
+QList<QVariant> targetColumnData=fetchSelectedColumnData(targetcol,filteredrow);
+targetColumnData=determineOne(targetColumnData);
+//選択済みリストからさらに選択するひつようあり
+//最後に、ダブりを解消
+
+
+
+//shapetypecolumnsでコントロールするより、tagでコントロールしてsectionwidgetのcreateviewと同じようにisolatorのcreateviewにデリゲートをべた書きするのが良い。
+//linebutton、tablemodelのセルのオンオフも、できればisolatortablemodelを作るべき。継承→コンストラクタおよびisDisableItemの部分。ベースプレートもできれば同様の処理。
+
+カタログデータを全部読んでおく？プルダウンで選択されるたびに読みに行く？デリゲートはアイソレータ用のでりげーとを作る？
+        //type
+        //空欄→パラメータをtrue、計算値をtrue
+        //直接入力→パラメータtrue,計算値false
+        //読み込み→表に値のあるパラメータはfalse、無いパラメータはtrue、計算値は値があればtrue、無ければfalse
+
+        //パラメータ
+        //選ぶと他のパラメータがフィルタされる。型番のフィルタ数が1になったら従属計算値もtrue＆対応する値を代入
+
+        //型番
+        //選ぶとパラメータがフィルタされ、従属計算値がtrue＆対応する値を代入（つまり、他のパラメータと同じ扱いで問題ない）
+
+        //従属計算値
+        //typeおよび型番のフィルタ数によって切り替え
+
+
+
+
+    //filterされたものからさらにフィルタ。フィルタの追加には対応できるが、変更には対応不可
+    //typeがブランクのときfiltereddataは空。typeが選ばれたとき、入力を読み込んでフィルタを作成、
+    //parameterが更新されたとき・typeが変更されたときリセット（値をクリア。
+    //値のクリアは別のルーチンでありバグが不安なので全入力を読み込みに行く実装でも）
+
+slotでeditableなセルが変化したとき、およびstringlistの内容の変更を受領
+→lelistでsettextできる？ファイルを新たに読み込んだとき、きちんとトリガーを叩く？
+modelindexを正しく処理できる？colに対して設定をしているからrowごとの違いを吸収できない？
+ならば新たにcomboboxを継承したクラスを作成する必要あり。
