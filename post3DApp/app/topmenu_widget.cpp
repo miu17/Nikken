@@ -11,6 +11,8 @@
 #include "analysisconditionreader.h"
 #include "analysisfloor_dialog.h"
 #include "analysisgroup_dialog.h"
+#include "app_version.h"
+#include "autosave.h"
 #include "calc_load.h"
 #include "calculation_manager_dialog.h"
 #include "calculationload2dsetting_dialog.h"
@@ -45,20 +47,19 @@
 #include "section_isolator_dialog.h"
 #include "section_opening_dialog.h"
 #include "section_slab_dialog.h"
-#include "section_wall_dialog.h"
 #include "section_uwall_dialog.h"
-#include "stress_combi_dialog.h"
+#include "section_wall_dialog.h"
 #include "slabloadsetting_dialog.h"
+#include "stress_combi_dialog.h"
 #include "textinput_dialog.h"
-#include "unified_inputdata.h"
 #include "unified_analysisdata.h"
-#include "unified_output.h"
 #include "unified_calcload.h"
 #include "unified_editingdata.h"
+#include "unified_inputdata.h"
+#include "unified_output.h"
 #include "unified_project.h"
 #include "unified_settings.h"
 #include "utility.h"
-#include "app_version.h"
 #include "vhline.h"
 
 namespace post3dapp
@@ -660,6 +661,11 @@ namespace post3dapp
         emit saveFileChanged();
 
         //スレッド
+        AutoSave *do_autosave = new AutoSave();
+        QThread *m_threadtest = new QThread;
+        do_autosave->moveToThread(m_threadtest);
+        //connect()
+        do_autosave->start();
 
         UnifiedEditingData::getInstance()->sendLogMessage("save file. \"" + filename + "\"");
     }

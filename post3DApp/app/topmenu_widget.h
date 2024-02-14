@@ -2,11 +2,13 @@
 #define TOPMENUWIDGET_H
 
 #include <QIcon>
+#include <QThread>
 #include <QWidget>
-
+//#include "autosave.h"
 class QFrame;
 class QTabWidget;
 class QTextStream;
+//class AutoSave;
 
 namespace post3dapp {
 enum class DATATYPE;
@@ -83,7 +85,8 @@ signals:
     void saveFileChanged();
 
 private:
-
+    //QThread thread_autosave;
+    //AutoSave threadA;
     QTabWidget *topMenuWidget;
     QIcon tabIcon;
     handleNPstn *npstn;
