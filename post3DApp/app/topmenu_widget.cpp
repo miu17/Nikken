@@ -113,6 +113,7 @@ namespace post3dapp
         MenuButton *estimate_button = new MenuButton(u8"資材量出力", CBSTATUS::CB_DEFAULT, this);
 
         MenuButton *plan_button = new MenuButton(u8"図面出力", CBSTATUS::CB_DISABLE, this);
+        QCheckBox *autosave_button = new QCheckBox(u8"自動保存");
 
         newfile_button->setFixedSize(90, 45);
         fileopen_button->setFixedSize(90, 45);
@@ -141,6 +142,7 @@ namespace post3dapp
         file_hlay->addWidget(estimate_button);
         file_hlay->addWidget(new VFLine(Qt::lightGray, this));
         file_hlay->addWidget(plan_button);
+        file_hlay->addWidget(autosave_button);
         file_hlay->addStretch();
         file_hlay->setContentsMargins(5, 0, 10, 0);
 
@@ -158,6 +160,27 @@ namespace post3dapp
         connect(openpstn_button, &MenuButton::clicked, this, &TopMenuWidget::slotPstnOpen);
         connect(writecsv_button, &MenuButton::clicked, this, &TopMenuWidget::slotWritePsv);
         connect(estimate_button, &MenuButton::clicked, this, &TopMenuWidget::slotEstimate);
+
+        //thread miu
+        connect(autosave_button, SIGNAL(clicked(bool)), this, SLOT(slotThreadAutoSave(bool)));
+        //connect(autosave_button, SIGNAL(clicked(bool)), t_autosave, SLOT(doWork(bool)));
+    }
+
+    //thread起動 miu
+    void TopMenuWidget::slotThreadAutoSave(bool onoff)
+    {
+        AutoSave *t_autosave = new AutoSave;
+        //QThread *m_thread = new QThread;
+        //t_autosave->moveToThread(m_thread);
+        qDebug() << onoff;
+        if (onoff == false) {
+            if (t_autosave->isRunning()) {
+                t_autosave->quit();
+            }
+        } else {
+            //m_thread->start();
+            t_autosave->start();
+        }
     }
 
     void TopMenuWidget::slotPstnOpen()
@@ -659,13 +682,6 @@ namespace post3dapp
 
         UnifiedEditingData::getInstance()->setCurrentFile(filename);
         emit saveFileChanged();
-
-        //スレッド
-        AutoSave *do_autosave = new AutoSave();
-        QThread *m_threadtest = new QThread;
-        do_autosave->moveToThread(m_threadtest);
-        //connect()
-        do_autosave->start();
 
         UnifiedEditingData::getInstance()->sendLogMessage("save file. \"" + filename + "\"");
     }

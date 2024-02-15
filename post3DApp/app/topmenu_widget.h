@@ -4,11 +4,10 @@
 #include <QIcon>
 #include <QThread>
 #include <QWidget>
-//#include "autosave.h"
+
 class QFrame;
 class QTabWidget;
 class QTextStream;
-//class AutoSave;
 
 namespace post3dapp {
 enum class DATATYPE;
@@ -80,13 +79,13 @@ public slots:
 
     void slotChangeTableName(DATATYPE, const QString &, const QString &);
 
+    void slotThreadAutoSave(bool onoff);
+
 signals:
 
     void saveFileChanged();
 
 private:
-    //QThread thread_autosave;
-    //AutoSave threadA;
     QTabWidget *topMenuWidget;
     QIcon tabIcon;
     handleNPstn *npstn;
