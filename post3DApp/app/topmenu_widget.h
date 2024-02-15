@@ -4,6 +4,7 @@
 #include <QIcon>
 #include <QThread>
 #include <QWidget>
+#include "autosave.h"
 
 class QFrame;
 class QTabWidget;
@@ -56,6 +57,7 @@ public:
 
     void enableSaveAsButton(bool);
     void enableAutoSaveButton(bool);
+    AutoSave *t_autosave = new AutoSave;
 
 public slots:
 

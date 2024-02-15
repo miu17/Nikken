@@ -170,18 +170,26 @@ namespace post3dapp
     //thread起動 miu
     void TopMenuWidget::slotThreadAutoSave(bool onoff)
     {
-        AutoSave *t_autosave = new AutoSave;
+        //AutoSave *t_autosave = new AutoSave;
         //QThread *m_thread = new QThread;
         //t_autosave->moveToThread(m_thread);
         qDebug() << onoff;
-        if (onoff == false) {
-            if (t_autosave->isRunning()) {
-                t_autosave->quit();
-            }
-        } else {
-            //m_thread->start();
+        if (onoff == true) {
             t_autosave->start();
+        } else {
+            t_autosave->stop(); //ループ終了（タイマー）
+            t_autosave->quit(); //スレッド終了
+            t_autosave->wait(); //終了を待つ
         }
+        //        if (onoff == false) {
+        //            if (t_autosave->isRunning()) {
+        //                t_autosave->quit();
+        //                t_autosave->wait();
+        //            }
+        //        } else if (onoff == true) {
+        //            //m_thread->start();
+        //            t_autosave->start();
+        //        }
     }
 
     void TopMenuWidget::slotPstnOpen()
