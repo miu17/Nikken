@@ -59,6 +59,7 @@ MainWidget::MainWidget(QWidget *parent)
     connect(topWidget, &TopMenuWidget::saveFileChanged, this, &MainWidget::slotChangeTitle);
 }
 
+//Miu 使えるかも　データが書き換わったらの処理
 void MainWidget::setModified()
 {
     isModified = true;
@@ -73,6 +74,7 @@ void MainWidget::slotChangeTitle()
     QString str = QString("Post3D MAIN  - [ ") + currentFileName + (".p3d ]");
     this->setWindowTitle(str);
     topWidget->enableSaveAsButton(false);
+    topWidget->enableAutoSaveButton(true); //miu 自動保存ボタンを有効にする
     isModified = false;
 }
 

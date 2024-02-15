@@ -113,7 +113,8 @@ namespace post3dapp
         MenuButton *estimate_button = new MenuButton(u8"資材量出力", CBSTATUS::CB_DEFAULT, this);
 
         MenuButton *plan_button = new MenuButton(u8"図面出力", CBSTATUS::CB_DISABLE, this);
-        QCheckBox *autosave_button = new QCheckBox(u8"自動保存");
+        autosave_button = new QCheckBox(u8"自動保存");
+        autosave_button->setEnabled(false);
 
         newfile_button->setFixedSize(90, 45);
         fileopen_button->setFixedSize(90, 45);
@@ -1824,6 +1825,12 @@ namespace post3dapp
         CBSTATUS status = (onoff) ? CBSTATUS::CB_DEFAULT : CBSTATUS::CB_DISABLE;
         saveAs_button->changeButtonColor(status);
         saveAs_button->setEnabled(onoff);
+    }
+
+    //AutoSave有効無効 miu
+    void TopMenuWidget::enableAutoSaveButton(bool onoff)
+    {
+        autosave_button->setEnabled(onoff);
     }
 
     void TopMenuWidget::setTableModel(FixedTableData *copy)

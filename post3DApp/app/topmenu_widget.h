@@ -55,6 +55,7 @@ public:
     TopMenuWidget( QWidget *parent = 0 );
 
     void enableSaveAsButton(bool);
+    void enableAutoSaveButton(bool);
 
 public slots:
 
@@ -79,7 +80,7 @@ public slots:
 
     void slotChangeTableName(DATATYPE, const QString &, const QString &);
 
-    void slotThreadAutoSave(bool onoff);
+    void slotThreadAutoSave(bool);
 
 signals:
 
@@ -91,6 +92,7 @@ private:
     handleNPstn *npstn;
 
     MenuButton *saveAs_button;
+    QCheckBox *autosave_button;
 
     FloorSettingDialog *floorSettingDialog;
     FrameSettingDialog *frameSettingDialog;
