@@ -4,7 +4,6 @@
 #include <QIcon>
 #include <QThread>
 #include <QWidget>
-#include "autosave.h"
 
 class QFrame;
 class QTabWidget;
@@ -47,6 +46,7 @@ class SectionUWallDialog;
 class SlabLoadSettingDialog;
 class StressCombiDialog;
 class TextInputDialog;
+class AutoSave;
 class TopMenuWidget : public QWidget
 {
     Q_OBJECT
@@ -57,7 +57,9 @@ public:
 
     void enableSaveAsButton(bool);
     void enableAutoSaveButton(bool);
-    AutoSave *t_autosave = new AutoSave;
+
+private:
+    AutoSave *m_AutoSave;
 
 public slots:
 
@@ -83,6 +85,7 @@ public slots:
     void slotChangeTableName(DATATYPE, const QString &, const QString &);
 
     void slotThreadAutoSave(bool);
+    void slotAutoSave();
 
 signals:
 
@@ -147,7 +150,7 @@ private:
     void createOtherTabMenu();
 
     bool checkDataFile( QDataStream &infile ) const;
-    void writeP3dDataFile( QDataStream &outfile ) const;
+    void writeP3dDataFile(QDataStream &outfile) const;
     void writeListP3dData( QDataStream &outfile, QHash<QString, qint64> & ) const;
     void writeWidgetP3dData( QDataStream &outfile, QHash<QString, qint64> &) const;
     void readP3dFile( QDataStream &infile );

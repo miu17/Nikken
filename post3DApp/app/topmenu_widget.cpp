@@ -68,6 +68,7 @@ namespace post3dapp
     TopMenuWidget::TopMenuWidget(QWidget *parent)
         : QWidget(parent)
     {
+        m_AutoSave = new AutoSave(this);
         topMenuWidget = new QTabWidget(this);
         topMenuWidget->setFixedHeight(80);
         topMenuWidget->setTabShape(QTabWidget::Rounded);
@@ -164,32 +165,21 @@ namespace post3dapp
 
         //thread miu
         connect(autosave_button, SIGNAL(clicked(bool)), this, SLOT(slotThreadAutoSave(bool)));
-        //connect(autosave_button, SIGNAL(clicked(bool)), t_autosave, SLOT(doWork(bool)));
     }
 
     //thread起動 miu
     void TopMenuWidget::slotThreadAutoSave(bool onoff)
     {
-        //AutoSave *t_autosave = new AutoSave;
         //QThread *m_thread = new QThread;
         //t_autosave->moveToThread(m_thread);
         qDebug() << onoff;
         if (onoff == true) {
-            t_autosave->start();
+            m_AutoSave->start();
         } else {
-            t_autosave->stop(); //ループ終了（タイマー）
-            t_autosave->quit(); //スレッド終了
-            t_autosave->wait(); //終了を待つ
+            m_AutoSave->stop(); //ループ終了（タイマー）
+            m_AutoSave->quit(); //スレッド終了
+            m_AutoSave->wait(); //終了を待つ
         }
-        //        if (onoff == false) {
-        //            if (t_autosave->isRunning()) {
-        //                t_autosave->quit();
-        //                t_autosave->wait();
-        //            }
-        //        } else if (onoff == true) {
-        //            //m_thread->start();
-        //            t_autosave->start();
-        //        }
     }
 
     void TopMenuWidget::slotPstnOpen()
@@ -706,6 +696,7 @@ namespace post3dapp
             Utility::showErrorMessage(this, u8"ファイル保存に失敗しました。");
             return;
         }
+        qDebug() << filename << "filename" << __func__;
 
         QDataStream outfile(&file);
         writeP3dDataFile(outfile);
@@ -713,17 +704,28 @@ namespace post3dapp
 
         emit saveFileChanged();
 
-        //Miutest
-        QTemporaryFile tmpFile;
-        ///ファイルコピー
-        QFile::copy(filename, tmpFile.fileTemplate());
-        //QSettings::copyFile("C:/Users/miu/Desktop/NIKKEN/post3D/a.p3d", tmpFile.fileTemplate());
-        //一時ファイル作成
-        tmpFile.open();
-        qDebug() << tmpFile.fileName() << "Miufile";
-        //C:\Users\miu\AppData\Local\Temp\post3DMain.XXXXXに一時ファイル保存
-
         UnifiedEditingData::getInstance()->sendLogMessage("save as file. \"" + filename + "\"");
+    }
+    //Miu 履歴ログ表示、タイトル変更なし＆上書き保存黒くならないように
+    void TopMenuWidget::slotAutoSave()
+    {
+        QString filename = UnifiedEditingData::getInstance()->currentFilePath();
+        if (filename.isEmpty())
+            return;
+        QFile file(filename);
+        if (!file.open(QIODevice::WriteOnly)) {
+            Utility::showErrorMessage(this, u8"ファイル保存に失敗しました。");
+            return;
+        }
+        qDebug() << filename << "filename" << __func__;
+
+        QDataStream outfile(&file);
+        writeP3dDataFile(outfile);
+        UnifiedInputData::getInInstance()->setFileName(filename);
+
+        //emit saveFileChanged();
+
+        UnifiedEditingData::getInstance()->sendLogMessage("autosave as file. \"" + filename + "\"");
     }
 
     void TopMenuWidget::slotFileOpen()

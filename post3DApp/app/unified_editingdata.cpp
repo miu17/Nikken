@@ -12,7 +12,8 @@
 
 namespace post3dapp{
 UnifiedEditingData* UnifiedEditingData::myInstance = nullptr;
-UnifiedEditingData::UnifiedEditingData(){
+UnifiedEditingData::UnifiedEditingData()
+{
     limitSelectTerm = LIMITSELECTTERM();
     xpStyle = new QProxyStyle();
     xpColorStyle = new TypicalColorStyle();
